@@ -8,9 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "AiInputComponent",
+"language": "GDScript",
+"path": "res://Cenas/pong/entities/Racket/AiInputComponent.gd"
+}, {
+"base": "Node",
+"class": "PlayerInputComponent",
+"language": "GDScript",
+"path": "res://Cenas/pong/entities/Racket/PlayerInputComponent.gd"
+} ]
+_global_script_class_icons={
+"AiInputComponent": "",
+"PlayerInputComponent": ""
+}
+
 [application]
 
 config/name="Projeto"
+run/main_scene="res://Cenas/Room.tscn"
 config/icon="res://icon.png"
 
 [gui]

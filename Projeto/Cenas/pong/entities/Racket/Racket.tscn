@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/assets_pong/barra.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.25, 40.5 )
+
+[node name="Racket" type="KinematicBody2D" groups=["rackets"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0.75, 0.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -79, 4 )
+scale = Vector2( 0.671512, 0.681931 )
+texture = ExtResource( 1 )

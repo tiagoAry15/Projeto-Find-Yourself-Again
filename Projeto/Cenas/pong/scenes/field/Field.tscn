@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Cenas/pong/scenes/field/Field.gd" type="Script" id=1]
+[ext_resource path="res://Cenas/pong/scenes/field/Line2D.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 512, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 256 )
+
+[node name="Field" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="WallTop" type="StaticBody2D" parent="."]
+position = Vector2( 512, -10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop"]
+shape = SubResource( 1 )
+
+[node name="WallBottom" type="StaticBody2D" parent="."]
+position = Vector2( 512, 522 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallBottom"]
+shape = SubResource( 1 )
+
+[node name="GoalLeft" type="Area2D" parent="."]
+position = Vector2( -10, 256 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalLeft"]
+shape = SubResource( 2 )
+
+[node name="GoalRight" type="Area2D" parent="."]
+position = Vector2( 1034, 256 )
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalRight"]
+shape = SubResource( 2 )
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0352941, 0.92549, 0.301961, 1 )
+
+[node name="Line2D" type="Line2D" parent="Background"]
+points = PoolVector2Array( 512, 0, 512, 512 )
+default_color = Color( 0.4, 0.501961, 1, 0 )
+texture_mode = -1081081856
+script = ExtResource( 2 )
+line_color = Color( 1, 1, 1, 1 )
+space_color = Color( 0, 0, 0, 0 )
+
+[connection signal="body_entered" from="GoalLeft" to="." method="_on_GoalLeft_body_entered"]
+[connection signal="body_entered" from="GoalRight" to="." method="_on_GoalRight_body_entered"]
