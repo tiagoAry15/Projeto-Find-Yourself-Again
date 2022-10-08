@@ -1,2 +1,0 @@
-- move up and down at a certain speed
-- distinguish between player and ai

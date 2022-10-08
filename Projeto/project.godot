@@ -27,12 +27,9 @@ _global_script_class_icons={
 [application]
 
 config/name="Projeto"
-run/main_scene="res://Cenas/Room.tscn"
+run/main_scene="res://Cenas/main/Room.tscn"
+boot_splash/use_filter=false
 config/icon="res://icon.png"
-
-[display]
-
-window/size/width=2048
 
 [gui]
 
