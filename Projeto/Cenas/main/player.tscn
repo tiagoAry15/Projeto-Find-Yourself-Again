@@ -1,0 +1,177 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://components/player/player.gd" type="Script" id=1]
+[ext_resource path="res://components/player/unicorn_atlas.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 2 )
+region = Rect2( 595, 1700, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 2 )
+region = Rect2( 340, 1700, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 2 )
+region = Rect2( 170, 1700, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 1530, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 2 )
+region = Rect2( 1615, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 1700, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 1785, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 1870, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 1955, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 85, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 170, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 255, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 340, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 425, 170, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 85, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 170, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 255, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 340, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 425, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 2 )
+region = Rect2( 1020, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 2 )
+region = Rect2( 1105, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 2 )
+region = Rect2( 1190, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 2 )
+region = Rect2( 1275, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 2 )
+region = Rect2( 1360, 0, 85, 170 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 2 )
+region = Rect2( 1445, 0, 85, 170 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 29 ) ],
+"loop": true,
+"name": "idle_down",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 30 ) ],
+"loop": true,
+"name": "idle_left",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "idle_right",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 31 ) ],
+"loop": true,
+"name": "idle_up",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "walk_down",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "walk_left",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "walk_right",
+"speed": 12.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "walk_up",
+"speed": 12.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=28]
+radius = 12.3077
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+position = Vector2( 526, 241 )
+scale = Vector2( 1.3, 1.3 )
+z_index = 1
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 8 )
+animation = "idle_left"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.53845, 63.8461 )
+rotation = 1.5708
+shape = SubResource( 28 )
