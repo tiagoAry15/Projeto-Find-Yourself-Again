@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/wall shelving 1.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/window_curtain_peach_a.png" type="Texture" id=2]
@@ -25,17 +25,73 @@
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/Blue Towel 4.png" type="Texture" id=23]
 [ext_resource path="res://assets/R.png" type="Texture" id=24]
 [ext_resource path="res://assets/assets_cenario/OIP.png" type="Texture" id=25]
-[ext_resource path="res://Cenas/main/player.tscn" type="PackedScene" id=26]
+
+[sub_resource type="SegmentShape2D" id=1]
+a = Vector2( -34.3121, 9.4472 )
+b = Vector2( -118.812, 70.329 )
+
+[sub_resource type="SegmentShape2D" id=2]
+a = Vector2( 807, -115.833 )
+b = Vector2( 38, 265 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -8, -0.833344 )
+b = Vector2( 890, 449.167 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 35.0001, 25.8333 )
+b = Vector2( -62.9999, 5.83333 )
+
+[sub_resource type="SegmentShape2D" id=5]
+a = Vector2( -30, 25.8333 )
+b = Vector2( 35, 11.6667 )
+
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( -36, 117.5 )
+
+[sub_resource type="SegmentShape2D" id=7]
+a = Vector2( 216, -8.33344 )
+b = Vector2( -35, 4.16656 )
+
+[sub_resource type="SegmentShape2D" id=8]
+a = Vector2( 480, 291.667 )
+b = Vector2( 449, 186.667 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 222.752, 258.129 )
+
+[sub_resource type="SegmentShape2D" id=12]
+a = Vector2( -124.733, 100.264 )
+b = Vector2( -249.558, 402.546 )
+
+[sub_resource type="SegmentShape2D" id=13]
+a = Vector2( 180, 463.333 )
+b = Vector2( -443.333, 63.3333 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 282.332, 202.182 )
+b = Vector2( -515.042, 235.108 )
+
+[sub_resource type="SegmentShape2D" id=10]
+a = Vector2( 520, 140 )
+b = Vector2( 160, 350 )
+
+[sub_resource type="SegmentShape2D" id=14]
+a = Vector2( 306.667, 270 )
+b = Vector2( -83.3333, 486.667 )
+
+[sub_resource type="SegmentShape2D" id=15]
+a = Vector2( -83.3333, 486.667 )
+b = Vector2( -290, 393.333 )
 
 [node name="Node2D" type="Node2D"]
-position = Vector2( 56, 373 )
 
 [node name="Céu" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="CéuEstreladow" type="TextureRect" parent="Céu"]
+visible = false
 margin_left = 349.0
 margin_top = -27.0
 margin_right = 823.0
@@ -53,6 +109,7 @@ margin_bottom = 512.0
 texture = ExtResource( 25 )
 
 [node name="CéuEstreladoSul" type="TextureRect" parent="Céu"]
+visible = false
 margin_left = 1419.0
 margin_top = -10.0001
 margin_right = 2419.0
@@ -69,14 +126,87 @@ texture = ExtResource( 24 )
 
 [node name="TileMap2" type="TileMap" parent="."]
 scale = Vector2( 1, 1.2 )
-z_index = -3
 mode = 1
 tile_set = ExtResource( 22 )
 cell_size = Vector2( 256, 128 )
 format = 1
 tile_data = PoolIntArray( -458753, 0, 0, -524288, 0, 0, -524287, 0, 0, -524286, 0, 0, -524285, 0, 0, -524284, 0, 0, -524283, 0, 0, -524282, 0, 0, -524281, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, -458748, 0, 0, -458747, 0, 0, -458746, 0, 0, -458745, 0, 0, -327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393214, 0, 0, -393213, 0, 0, -393212, 0, 0, -393211, 0, 0, -393210, 0, 0, -393209, 0, 0, -262145, 0, 0, -327680, 0, 0, -327679, 0, 0, -327678, 0, 0, -327677, 0, 0, -327676, 0, 0, -327675, 0, 0, -327674, 0, 0, -327673, 0, 0, -196609, 0, 0, -262144, 0, 0, -262143, 0, 0, -262142, 0, 0, -262141, 0, 0, -262140, 0, 0, -262139, 0, 0, -262138, 0, 0, -262137, 0, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 0, 0, -131070, 0, 0, -131069, 0, 0, -131068, 0, 0, -131067, 0, 0, -131066, 0, 0, -131065, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -65531, 0, 0, -65530, 0, 0, -65529, 0, 0, 196623, 0, 0 )
 
-[node name="Cenario" type="Node2D" parent="."]
+[node name="WoodTable1" type="Sprite" parent="."]
+position = Vector2( 1080, 761 )
+scale = Vector2( 1.95266, 1.90533 )
+texture = ExtResource( 14 )
+
+[node name="TvA" type="Sprite" parent="WoodTable1"]
+modulate = Color( 0.192157, 0.160784, 0.160784, 1 )
+position = Vector2( 8.19397, -77.677 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodTable1"]
+position = Vector2( 3.58484, -15.2205 )
+shape = SubResource( 1 )
+
+[node name="TableRoundBlue" type="Sprite" parent="."]
+position = Vector2( 1245, 456 )
+scale = Vector2( 0.786982, 1.01183 )
+texture = ExtResource( 11 )
+
+[node name="Piano3" type="Sprite" parent="."]
+position = Vector2( 1399, 529 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano3"]
+position = Vector2( 41.9999, -27 )
+scale = Vector2( 0.97633, 0.952665 )
+shape = SubResource( 1 )
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.811765, 0.847059, 0.54902, 1 )
+scale = Vector2( 1, 1.2 )
+mode = 1
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 256, 128 )
+format = 1
+tile_data = PoolIntArray( -458753, 6, 0, -524288, 1, 0, -524287, 1, 0, -524286, 1, 0, -524285, 9, 0, -524284, 1, 0, -524283, 1, 0, -524282, 1, 0, -524281, 5, 0, -393217, 4, 0, -458745, 2, 0, -327681, 4, 0, -393209, 2, 0, -262145, 4, 0, -327673, 2, 0, -196609, 0, 0, -262137, 2, 0, -131073, 4, 0, -196601, 2, 0, -65537, 4, 0, -131065, 2, 0, -1, 8, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 7, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 1113, 555 )
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 7, 379.167 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 996, -118.333 )
+shape = SubResource( 3 )
+
+[node name="Cantosuperiordireito" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 956, -144.167 )
+shape = SubResource( 4 )
+
+[node name="superiordireito" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 860, -150 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 30, 260 )
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 936, 827.5 )
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMap"]
+position = Vector2( 1442, 145 )
+shape = SubResource( 8 )
+
+[node name="Cenario" type="Node" parent="."]
 
 [node name="BlueTowel4" type="Sprite" parent="Cenario"]
 position = Vector2( 330, 64 )
@@ -100,9 +230,28 @@ position = Vector2( -270, 163.333 )
 scale = Vector2( 0.666667, 0.666667 )
 texture = ExtResource( 3 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1/Chair1"]
+position = Vector2( 31.019, 153.602 )
+rotation = 0.656244
+scale = Vector2( 1, 1 )
+shape = SubResource( 11 )
+
 [node name="LargeCandle1" type="Sprite" parent="Cenario/Desk1"]
 position = Vector2( -130, -326.667 )
 texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1"]
+position = Vector2( -10, -103.333 )
+rotation = 0.656244
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Desk1"]
+position = Vector2( 616.667, 273.333 )
+rotation = 0.656244
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Desk1"]
+shape = SubResource( 13 )
 
 [node name="Lamp" type="Sprite" parent="Cenario"]
 position = Vector2( 889, -195 )
@@ -113,6 +262,19 @@ texture = ExtResource( 5 )
 position = Vector2( 876, -75 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Bed1"]
+position = Vector2( 46.6667, 36.6666 )
+rotation = 0.575959
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Bed1"]
+position = Vector2( 396.667, -193.333 )
+rotation = 0.575959
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Bed1"]
+shape = SubResource( 10 )
 
 [node name="WallShelving1" type="Sprite" parent="Cenario"]
 position = Vector2( 583, -88 )
@@ -131,6 +293,16 @@ position = Vector2( 196, 176 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 18 )
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Closet2"]
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Closet2"]
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Closet2"]
+position = Vector2( 383.333, -226.667 )
+shape = SubResource( 15 )
+
 [node name="WindowCurtainPeachA" type="Sprite" parent="Cenario"]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1446, 30 )
@@ -140,7 +312,7 @@ texture = ExtResource( 2 )
 
 [node name="Art75" type="Sprite" parent="Cenario"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 993, 347 )
+position = Vector2( 972, 338 )
 scale = Vector2( 5, 6 )
 texture = ExtResource( 15 )
 
@@ -171,52 +343,3 @@ rotation = 0.0698132
 scale = Vector2( 1.4, 1.2 )
 texture = ExtResource( 21 )
 flip_h = true
-
-[node name="Piano3" type="Sprite" parent="Cenario"]
-position = Vector2( 1399, 529 )
-scale = Vector2( 2, 2 )
-z_index = -2
-texture = ExtResource( 4 )
-
-[node name="WoodTable1" type="Sprite" parent="Cenario"]
-position = Vector2( 1065, 730 )
-scale = Vector2( 1.95266, 1.90533 )
-z_index = -2
-z_as_relative = false
-texture = ExtResource( 14 )
-
-[node name="TvA" type="Sprite" parent="Cenario/WoodTable1"]
-modulate = Color( 0.192157, 0.160784, 0.160784, 1 )
-position = Vector2( 8.19397, -77.677 )
-scale = Vector2( 1.5, 1.5 )
-texture = ExtResource( 10 )
-
-[node name="TableRoundBlue" type="Sprite" parent="Cenario"]
-position = Vector2( 1245, 456 )
-scale = Vector2( 0.786982, 1.01183 )
-z_index = -3
-texture = ExtResource( 11 )
-
-[node name="TileMap" type="TileMap" parent="."]
-modulate = Color( 0.811765, 0.847059, 0.54902, 1 )
-scale = Vector2( 1, 1.2 )
-z_index = -1
-mode = 1
-tile_set = ExtResource( 7 )
-cell_size = Vector2( 256, 128 )
-format = 1
-tile_data = PoolIntArray( -458753, 6, 0, -524288, 1, 0, -524287, 1, 0, -524286, 1, 0, -524285, 9, 0, -524284, 1, 0, -524283, 1, 0, -524282, 1, 0, -524281, 5, 0, -393217, 4, 0, -458745, 2, 0, -327681, 4, 0, -393209, 2, 0, -262145, 4, 0, -327673, 2, 0, -196609, 0, 0, -262137, 2, 0, -131073, 4, 0, -196601, 2, 0, -65537, 4, 0, -131065, 2, 0, -1, 8, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 7, 0 )
-
-[node name="KinematicBody2D" parent="." instance=ExtResource( 26 )]
-position = Vector2( 1000, 238 )
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 998, 318 )
-current = true
-zoom = Vector2( 2, 2 )
-limit_left = 0
-limit_right = 2034
-limit_bottom = 1400
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-editor_draw_limits = true
