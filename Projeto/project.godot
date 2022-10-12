@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Projeto"
-run/main_scene="res://Cenas/Room.tscn"
+run/main_scene="res://Cenas/main/Main.tscn"
 config/icon="res://icon.png"
 
 [gui]
