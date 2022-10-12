@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Cenas/main/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Cenas/Room.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/main/Room.tscn" type="PackedScene" id=2]
 
 [node name="Main" type="Node2D"]
 

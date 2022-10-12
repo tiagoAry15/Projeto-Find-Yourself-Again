@@ -420,3 +420,14 @@ script = ExtResource( 26 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate"]
 anims/Animation_Day_Night = SubResource( 16 )
 anims/RESET = SubResource( 17 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 998, 318 )
+current = true
+zoom = Vector2( 1.98, 2.3 )
+limit_left = 0
+limit_right = 2034
+limit_bottom = 1400
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_limits = true
