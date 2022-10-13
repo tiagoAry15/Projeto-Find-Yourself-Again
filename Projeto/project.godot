@@ -27,11 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Projeto"
-<<<<<<< HEAD
 run/main_scene="res://Cenas/main/Main.tscn"
-=======
-run/main_scene="res://Cenas/main/RoomInitial.tscn"
->>>>>>> c37bd18ac0140c077384c4434dc268cc175ccfb0
 boot_splash/use_filter=false
 config/icon="res://icon.png"
 
@@ -47,7 +43,7 @@ common/drop_mouse_on_gui_input_disabled=true
 
 game_move={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 

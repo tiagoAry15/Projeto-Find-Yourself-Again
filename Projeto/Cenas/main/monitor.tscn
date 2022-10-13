@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Cenas/interface/computerOptions.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/main/score.gd" type="Script" id=2]
+[ext_resource path="res://Cenas/main/monitor.gd" type="Script" id=3]
+[ext_resource path="res://assets/assets_cenario/shop.png" type="Texture" id=4]
+[ext_resource path="res://assets/assets_cenario/monitor.png" type="Texture" id=5]
+
+[node name="monitor" type="Sprite"]
+position = Vector2( 512, 299.5 )
+scale = Vector2( 2.63239, 2.04467 )
+texture = ExtResource( 5 )
+script = ExtResource( 3 )
+
+[node name="back" type="Button" parent="."]
+visible = false
+margin_left = 70.8731
+margin_top = -99.8728
+margin_right = 119.873
+margin_bottom = -79.8728
+text = "Voltar"
+
+[node name="Menu" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.678
+anchor_top = 0.743
+anchor_right = 0.678
+anchor_bottom = 0.743
+margin_left = -428.798
+margin_top = -263.767
+margin_right = -121.798
+margin_bottom = -73.7672
+
+[node name="exit" type="Button" parent="Menu"]
+margin_left = 293.118
+margin_top = -51.7108
+margin_right = 316.118
+margin_bottom = -31.7108
+text = "X"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="score" type="Label" parent="Menu"]
+margin_left = 13.212
+margin_top = -48.4662
+margin_right = 53.212
+margin_bottom = -34.4662
+text = "COIN:"
+script = ExtResource( 2 )
+
+[node name="shop" type="Button" parent="Menu"]
+margin_left = 98.1465
+margin_top = 89.4293
+margin_right = 242.147
+margin_bottom = 163.429
+icon = ExtResource( 4 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="buy1" type="Button" parent="Menu"]
+visible = false
+margin_left = 71.9112
+margin_top = 32.446
+margin_right = 126.911
+margin_bottom = 69.446
+rect_pivot_offset = Vector2( 44.7322, 24.5373 )
+text = "Tapete"
+
+[node name="Label" type="Label" parent="Menu/buy1"]
+margin_left = 7.54968
+margin_top = 43.5996
+margin_right = 47.5497
+margin_bottom = 57.5996
+text = "5$"
+align = 1
+autowrap = true
+
+[node name="buy2" type="Button" parent="Menu"]
+visible = false
+margin_left = 183.27
+margin_top = 33.0543
+margin_right = 242.27
+margin_bottom = 70.0543
+rect_pivot_offset = Vector2( 44.7322, 24.5373 )
+text = "Cadeira"
+
+[node name="Label" type="Label" parent="Menu/buy2"]
+margin_left = 10.0031
+margin_top = 41.9774
+margin_right = 50.0031
+margin_bottom = 55.9774
+text = "5$"
+align = 1
+autowrap = true
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="Menu/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Menu/shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Menu/buy1" to="." method="_on_buy1_pressed"]
+[connection signal="pressed" from="Menu/buy2" to="." method="_on_buy2_pressed"]
