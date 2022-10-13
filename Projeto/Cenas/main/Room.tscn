@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/wall shelving 1.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/window_curtain_peach_a.png" type="Texture" id=2]
@@ -25,57 +25,147 @@
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/Blue Towel 4.png" type="Texture" id=23]
 [ext_resource path="res://assets/R.png" type="Texture" id=24]
 [ext_resource path="res://assets/assets_cenario/OIP.png" type="Texture" id=25]
-[ext_resource path="res://Cenas/Day_Night.gd" type="Script" id=26]
+[ext_resource path="res://Cenas/main/Day_Night.gd" type="Script" id=26]
+[ext_resource path="res://Cenas/main/CéuEstreladoSul2.gd" type="Script" id=27]
+
+[sub_resource type="Animation" id=22]
+resource_name = "CEU"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CéuEstreladoSul2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5.5, 5.6, 17.5, 17.6, 19.7, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CéuEstreladoSul2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "CEU"
+length = 24.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CéuEstreladoSul3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5.5, 5.6, 17.5, 17.6, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CéuEstreladoSul2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../CéuEstreladoSul3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="SegmentShape2D" id=1]
-a = Vector2( -34.3121, 9.4472 )
+a = Vector2( 6.14545, -21.5185 )
 b = Vector2( -118.812, 70.329 )
+
+[sub_resource type="SegmentShape2D" id=18]
+a = Vector2( 7.68182, -33.59 )
+b = Vector2( 81.9395, 13.6459 )
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 38.7556, 19.3305 )
+
+[sub_resource type="SegmentShape2D" id=19]
+a = Vector2( -72, 39 )
+b = Vector2( 60.5, 113 )
+
+[sub_resource type="SegmentShape2D" id=20]
+a = Vector2( 11.5, -18.5 )
+b = Vector2( 132, 73 )
 
 [sub_resource type="SegmentShape2D" id=2]
 a = Vector2( 807, -115.833 )
 b = Vector2( 38, 265 )
 
-[sub_resource type="SegmentShape2D" id=3]
-a = Vector2( -8, -0.833344 )
-b = Vector2( 890, 449.167 )
-
-[sub_resource type="SegmentShape2D" id=4]
-a = Vector2( 35.0001, 25.8333 )
-b = Vector2( -62.9999, 5.83333 )
-
-[sub_resource type="SegmentShape2D" id=5]
-a = Vector2( -30, 25.8333 )
-b = Vector2( 35, 11.6667 )
-
-[sub_resource type="SegmentShape2D" id=6]
-a = Vector2( -36, 117.5 )
+[sub_resource type="SegmentShape2D" id=8]
+a = Vector2( 480, 291.667 )
+b = Vector2( 449, 186.667 )
 
 [sub_resource type="SegmentShape2D" id=7]
 a = Vector2( 216, -8.33344 )
 b = Vector2( -35, 4.16656 )
 
-[sub_resource type="SegmentShape2D" id=8]
-a = Vector2( 480, 291.667 )
-b = Vector2( 449, 186.667 )
+[sub_resource type="SegmentShape2D" id=6]
+a = Vector2( -36, 117.5 )
+
+[sub_resource type="SegmentShape2D" id=5]
+a = Vector2( -30, 25.8333 )
+b = Vector2( 35, 11.6667 )
+
+[sub_resource type="SegmentShape2D" id=4]
+a = Vector2( 35.0001, 25.8333 )
+b = Vector2( -62.9999, 5.83333 )
+
+[sub_resource type="SegmentShape2D" id=3]
+a = Vector2( -8, -0.833344 )
+b = Vector2( 890, 449.167 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 222.752, 258.129 )
-
-[sub_resource type="SegmentShape2D" id=12]
-a = Vector2( -124.733, 100.264 )
-b = Vector2( -249.558, 402.546 )
 
 [sub_resource type="SegmentShape2D" id=13]
 a = Vector2( 180, 463.333 )
 b = Vector2( -443.333, 63.3333 )
 
-[sub_resource type="SegmentShape2D" id=9]
-a = Vector2( 282.332, 202.182 )
-b = Vector2( -515.042, 235.108 )
+[sub_resource type="SegmentShape2D" id=12]
+a = Vector2( -124.733, 100.264 )
+b = Vector2( -249.558, 402.546 )
 
 [sub_resource type="SegmentShape2D" id=10]
 a = Vector2( 520, 140 )
 b = Vector2( 160, 350 )
+
+[sub_resource type="SegmentShape2D" id=9]
+a = Vector2( 282.332, 202.182 )
+b = Vector2( -515.042, 235.108 )
 
 [sub_resource type="SegmentShape2D" id=14]
 a = Vector2( 306.667, 270 )
@@ -167,38 +257,50 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 40.0
 
-[node name="Dia" type="TextureRect" parent="Céu"]
-visible = false
-margin_left = 349.0
-margin_top = -27.0
-margin_right = 823.0
-margin_bottom = 333.0
-rect_scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 25 )
-
-[node name="CéuEstreladow" type="TextureRect" parent="Céu/Dia"]
-anchor_top = -0.075
-anchor_bottom = -0.075
-margin_left = 5360.0
-margin_top = 152.0
-margin_right = 6079.0
-margin_bottom = 512.0
-texture = ExtResource( 25 )
-
 [node name="CéuEstreladoSul" type="TextureRect" parent="Céu"]
-margin_left = 1419.0
-margin_top = -10.0001
-margin_right = 2419.0
+margin_left = 1414.0
+margin_top = -10.0
+margin_right = 1888.0
+margin_bottom = 350.0
+rect_scale = Vector2( 0.23, 0.23 )
+texture = ExtResource( 25 )
+
+[node name="CéuEstreladoSul2" type="TextureRect" parent="Céu"]
+margin_left = 325.0
+margin_top = -35.0
+margin_right = 799.0
+margin_bottom = 325.0
+rect_scale = Vector2( 0.23, 0.23 )
+texture = ExtResource( 25 )
+
+[node name="CéuEstreladoSul2" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 306.0
+margin_top = -31.0001
+margin_right = 1306.0
+margin_bottom = 759.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 24 )
+script = ExtResource( 27 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CéuEstreladoSul2"]
+root_node = NodePath("../../Céu")
+anims/CEU = SubResource( 22 )
+anims/RESET = SubResource( 23 )
+
+[node name="CéuEstreladoSul3" type="TextureRect" parent="."]
+margin_left = 1415.0
+margin_top = -10.0
+margin_right = 2415.0
 margin_bottom = 780.0
 rect_scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 24 )
+script = ExtResource( 27 )
 
-[node name="CéuEstreladoSul" type="TextureRect" parent="Céu/CéuEstreladoSul"]
-margin_left = -11130.0
-margin_top = -210.0
-margin_right = -10130.0
-margin_bottom = 580.0
-texture = ExtResource( 24 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CéuEstreladoSul3"]
+root_node = NodePath("../../Céu")
+anims/CEU = SubResource( 24 )
+anims/RESET = SubResource( 25 )
 
 [node name="TileMap2" type="TileMap" parent="."]
 scale = Vector2( 1, 1.2 )
@@ -219,24 +321,44 @@ position = Vector2( 8.19397, -77.677 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 10 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodTable1"]
+[node name="Static" type="StaticBody2D" parent="WoodTable1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodTable1/Static"]
 position = Vector2( 3.58484, -15.2205 )
 shape = SubResource( 1 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="WoodTable1/Static"]
+shape = SubResource( 18 )
+
 [node name="TableRoundBlue" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1245, 456 )
 scale = Vector2( 0.786982, 1.01183 )
 texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TableRoundBlue"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TableRoundBlue/StaticBody2D"]
+position = Vector2( 0.635132, -17.7896 )
+shape = SubResource( 21 )
 
 [node name="Piano3" type="Sprite" parent="."]
 position = Vector2( 1399, 529 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano3"]
+[node name="static" type="StaticBody2D" parent="Piano3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Piano3/static"]
 position = Vector2( 41.9999, -27 )
 scale = Vector2( 0.97633, 0.952665 )
 shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Piano3/static"]
+shape = SubResource( 19 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Piano3/static"]
+shape = SubResource( 20 )
 
 [node name="TileMap" type="TileMap" parent="."]
 modulate = Color( 0.811765, 0.847059, 0.54902, 1 )
@@ -247,40 +369,58 @@ cell_size = Vector2( 256, 128 )
 format = 1
 tile_data = PoolIntArray( -458753, 6, 0, -524288, 1, 0, -524287, 1, 0, -524286, 1, 0, -524285, 9, 0, -524284, 1, 0, -524283, 1, 0, -524282, 1, 0, -524281, 5, 0, -393217, 4, 0, -458745, 2, 0, -327681, 4, 0, -393209, 2, 0, -262145, 4, 0, -327673, 2, 0, -196609, 0, 0, -262137, 2, 0, -131073, 4, 0, -196601, 2, 0, -65537, 4, 0, -131065, 2, 0, -1, 8, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 7, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap"]
+[node name="Area2D" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/Area2D"]
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 1113, 555 )
-shape = SubResource( 2 )
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 7, 379.167 )
-shape = SubResource( 3 )
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMap/StaticBody2D"]
+position = Vector2( 1442, 145 )
+shape = SubResource( 8 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 996, -118.333 )
-shape = SubResource( 3 )
+[node name="StaticBody2D2" type="StaticBody2D" parent="TileMap"]
 
-[node name="Cantosuperiordireito" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 956, -144.167 )
-shape = SubResource( 4 )
-
-[node name="superiordireito" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 860, -150 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 30, 260 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="TileMap/StaticBody2D2"]
 position = Vector2( 936, 827.5 )
 shape = SubResource( 7 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="TileMap"]
-position = Vector2( 1442, 145 )
-shape = SubResource( 8 )
+[node name="StaticBody2D5" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="TileMap/StaticBody2D5"]
+position = Vector2( 30, 260 )
+shape = SubResource( 6 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="TileMap"]
+
+[node name="superiordireito" type="CollisionShape2D" parent="TileMap/StaticBody2D4"]
+position = Vector2( 860, -150 )
+shape = SubResource( 5 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="TileMap"]
+
+[node name="Cantosuperiordireito" type="CollisionShape2D" parent="TileMap/StaticBody2D3"]
+position = Vector2( 956, -144.167 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="TileMap/StaticBody2D6"]
+position = Vector2( 996, -118.333 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="TileMap/StaticBody2D7"]
+position = Vector2( 7, 379.167 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="TileMap"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/StaticBody2D8"]
+position = Vector2( 1113, 555 )
+shape = SubResource( 2 )
 
 [node name="Cenario" type="Node" parent="."]
 
@@ -313,22 +453,29 @@ position = Vector2( 10, -34.9995 )
 shape = SubResource( 1 )
 one_way_collision_margin = 0.0
 
+
 [node name="LargeCandle1" type="Sprite" parent="Cenario/Desk1"]
 position = Vector2( -130, -326.667 )
 texture = ExtResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1"]
-position = Vector2( -10, -103.333 )
-rotation = 0.656244
-shape = SubResource( 12 )
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Desk1"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Desk1"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Desk1/StaticBody2D"]
+shape = SubResource( 13 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Desk1"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Desk1/StaticBody2D2"]
 position = Vector2( 616.667, 273.333 )
 rotation = 0.656244
 shape = SubResource( 12 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Desk1"]
-shape = SubResource( 13 )
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Desk1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1/StaticBody2D3"]
+position = Vector2( -10, -103.333 )
+rotation = 0.656244
+shape = SubResource( 12 )
 
 [node name="Lamp" type="Sprite" parent="Cenario"]
 position = Vector2( 889, -195 )
@@ -340,18 +487,24 @@ position = Vector2( 876, -75 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 6 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Bed1"]
-position = Vector2( 46.6667, 36.6666 )
-rotation = 0.575959
-shape = SubResource( 9 )
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Bed1"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Bed1"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Bed1/StaticBody2D"]
+shape = SubResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Bed1"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Bed1/StaticBody2D2"]
 position = Vector2( 396.667, -193.333 )
 rotation = 0.575959
 shape = SubResource( 9 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Bed1"]
-shape = SubResource( 10 )
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Bed1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Bed1/StaticBody2D3"]
+position = Vector2( 46.6665, 36.6666 )
+rotation = 0.575959
+shape = SubResource( 9 )
 
 [node name="WallShelving1" type="Sprite" parent="Cenario"]
 position = Vector2( 583, -88 )
@@ -370,14 +523,20 @@ position = Vector2( 196, 176 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 18 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Closet2"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Closet2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Closet2/StaticBody2D"]
 shape = SubResource( 14 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Closet2"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Closet2"]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Closet2/StaticBody2D2"]
+position = Vector2( 383.333, -226.667 )
 shape = SubResource( 15 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Closet2"]
-position = Vector2( 383.333, -226.667 )
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Closet2"]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Closet2/StaticBody2D3"]
 shape = SubResource( 15 )
 
 [node name="WindowCurtainPeachA" type="Sprite" parent="Cenario"]
