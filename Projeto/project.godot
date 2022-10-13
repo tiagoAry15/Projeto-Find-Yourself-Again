@@ -14,7 +14,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Cenas/pong/entities/Racket/AiInputComponent.gd"
 }, {
-"base": "Node",
+"base": "KinematicBody2D",
 "class": "PlayerInputComponent",
 "language": "GDScript",
 "path": "res://Cenas/pong/entities/Racket/PlayerInputComponent.gd"
@@ -27,9 +27,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Projeto"
-run/main_scene="res://Cenas/main/Room.tscn"
+run/main_scene="res://Cenas/main/RoomInitial.tscn"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+
+[autoload]
+
+GameManager="*res://Cenas/main/gameManager.gd"
 
 [gui]
 
@@ -39,7 +43,7 @@ common/drop_mouse_on_gui_input_disabled=true
 
 game_move={
 "deadzone": 0.5,
-"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 
