@@ -247,6 +247,11 @@ tracks/4/keys = {
 }
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 56, 373 )
+script = ExtResource( 30 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 709.0 ]
+}
 
 [node name="Céu" type="Control" parent="."]
 margin_right = 40.0
@@ -441,12 +446,13 @@ position = Vector2( -270, 163.333 )
 scale = Vector2( 0.666667, 0.666667 )
 texture = ExtResource( 3 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Desk1/Chair1"]
+[node name="Area2D" type="Area2D" parent="Cenario/Desk1/Chair1"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1/Chair1/StaticBody2D"]
-position = Vector2( 31.0186, 153.602 )
-rotation = 0.656244
-shape = SubResource( 11 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1/Chair1/Area2D"]
+position = Vector2( 10, -34.9995 )
+shape = SubResource( 1 )
+one_way_collision_margin = 0.0
+
 
 [node name="LargeCandle1" type="Sprite" parent="Cenario/Desk1"]
 position = Vector2( -130, -326.667 )
@@ -540,7 +546,8 @@ rotation = 0.0698132
 scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 2 )
 
-[node name="Art75" type="Sprite" parent="Cenario"]
+[node name="tapete" type="Sprite" parent="Cenario"]
+visible = false
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 972, 338 )
 scale = Vector2( 5, 6 )
@@ -574,15 +581,49 @@ scale = Vector2( 1.4, 1.2 )
 texture = ExtResource( 21 )
 flip_h = true
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-script = ExtResource( 26 )
+[node name="Piano3" type="Sprite" parent="Cenario"]
+position = Vector2( 1399, 529 )
+scale = Vector2( 2, 2 )
+z_index = -2
+texture = ExtResource( 4 )
+
+[node name="WoodTable1" type="Sprite" parent="Cenario"]
+position = Vector2( 1065, 730 )
+scale = Vector2( 1.95266, 1.90533 )
+z_index = -2
+z_as_relative = false
+texture = ExtResource( 14 )
+
+[node name="TvA" type="Sprite" parent="Cenario/WoodTable1"]
+modulate = Color( 0.192157, 0.160784, 0.160784, 1 )
+position = Vector2( 8.19397, -77.677 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 10 )
+
+[node name="TableRoundBlue" type="Sprite" parent="Cenario"]
+visible = false
+position = Vector2( 1245, 456 )
+scale = Vector2( 0.786982, 1.01183 )
+z_index = -3
+texture = ExtResource( 11 )
+
+[node name="TileMap" type="TileMap" parent="."]
+modulate = Color( 0.811765, 0.847059, 0.54902, 1 )
+scale = Vector2( 1, 1.2 )
+z_index = -1
+mode = 1
+tile_set = ExtResource( 7 )
+cell_size = Vector2( 256, 128 )
+format = 1
+tile_data = PoolIntArray( -458753, 6, 0, -524288, 1, 0, -524287, 1, 0, -524286, 1, 0, -524285, 9, 0, -524284, 1, 0, -524283, 1, 0, -524282, 1, 0, -524281, 5, 0, -393217, 4, 0, -458745, 2, 0, -327681, 4, 0, -393209, 2, 0, -262145, 4, 0, -327673, 2, 0, -196609, 0, 0, -262137, 2, 0, -131073, 4, 0, -196601, 2, 0, -65537, 4, 0, -131065, 2, 0, -1, 8, 0, -65536, 3, 0, -65535, 3, 0, -65534, 3, 0, -65533, 3, 0, -65532, 3, 0, -65531, 3, 0, -65530, 3, 0, -65529, 7, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasModulate"]
 anims/Animation_Day_Night = SubResource( 16 )
 anims/RESET = SubResource( 17 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 998, 318 )
+position = Vector2( 1001, 315 )
+rotation = -6.28319
 current = true
 zoom = Vector2( 1.98, 2.3 )
 limit_left = 0
@@ -591,3 +632,81 @@ limit_bottom = 1400
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 editor_draw_limits = true
+
+[node name="player" parent="." instance=ExtResource( 26 )]
+position = Vector2( 1594, 272 )
+
+[node name="monitor" type="Sprite" parent="."]
+position = Vector2( 956.5, 318.5 )
+scale = Vector2( 5.2982, 4.93127 )
+texture = ExtResource( 28 )
+
+[node name="back" type="Button" parent="monitor"]
+margin_left = 70.8731
+margin_top = -99.8728
+margin_right = 119.873
+margin_bottom = -79.8728
+text = "Voltar"
+
+[node name="Menu" parent="monitor" instance=ExtResource( 29 )]
+anchor_left = 0.678
+anchor_top = 0.743
+anchor_right = 0.678
+anchor_bottom = 0.743
+margin_left = -428.798
+margin_top = -263.767
+margin_right = -121.798
+margin_bottom = -73.7672
+
+[node name="exit" type="Button" parent="monitor/Menu"]
+margin_left = 293.118
+margin_top = -51.7108
+margin_right = 316.118
+margin_bottom = -31.7108
+text = "X"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="score" type="Label" parent="monitor/Menu"]
+margin_left = 13.212
+margin_top = -48.4662
+margin_right = 53.212
+margin_bottom = -34.4662
+text = "COIN:"
+script = ExtResource( 27 )
+
+[node name="shop" type="Button" parent="monitor/Menu"]
+margin_left = 98.1465
+margin_top = 89.4293
+margin_right = 242.147
+margin_bottom = 163.429
+icon = ExtResource( 31 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="buy1" type="Button" parent="monitor/Menu"]
+visible = false
+margin_left = 71.9112
+margin_top = 32.446
+margin_right = 126.911
+margin_bottom = 69.446
+rect_pivot_offset = Vector2( 44.7322, 24.5373 )
+text = "Tapete"
+
+[node name="buy2" type="Button" parent="monitor/Menu"]
+visible = false
+margin_left = 183.27
+margin_top = 33.0543
+margin_right = 242.27
+margin_bottom = 70.0543
+rect_pivot_offset = Vector2( 44.7322, 24.5373 )
+text = "Cadeira"
+
+[connection signal="body_entered" from="Cenario/Desk1/Chair1/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="pressed" from="monitor/back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="monitor/Menu/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="monitor/Menu/shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="monitor/Menu/buy1" to="." method="_on_buy1_pressed"]
+[connection signal="pressed" from="monitor/Menu/buy2" to="." method="_on_buy2_pressed"]
