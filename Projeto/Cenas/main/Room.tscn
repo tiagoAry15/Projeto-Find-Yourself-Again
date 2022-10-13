@@ -449,8 +449,9 @@ texture = ExtResource( 3 )
 [node name="Area2D" type="Area2D" parent="Cenario/Desk1/Chair1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk1/Chair1/Area2D"]
-position = Vector2( 10, -34.9995 )
-shape = SubResource( 1 )
+position = Vector2( 31.019, 153.602 )
+rotation = 0.656244
+shape = SubResource( 11 )
 one_way_collision_margin = 0.0
 
 
@@ -546,6 +547,7 @@ rotation = 0.0698132
 scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 2 )
 
+[node name="Art75" type="Sprite" parent="Cenario"]
 [node name="tapete" type="Sprite" parent="Cenario"]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
@@ -580,7 +582,8 @@ rotation = 0.0698132
 scale = Vector2( 1.4, 1.2 )
 texture = ExtResource( 21 )
 flip_h = true
-
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource( 26 )
 [node name="Piano3" type="Sprite" parent="Cenario"]
 position = Vector2( 1399, 529 )
 scale = Vector2( 2, 2 )
