@@ -33,7 +33,7 @@
 radius = 315.0
 height = 439.999
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 position = Vector2( 56, 373 )
 script = ExtResource( 29 )
 
@@ -227,7 +227,6 @@ tile_data = PoolIntArray( -458753, 6, 0, -524288, 1, 0, -524287, 1, 0, -524286, 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 1001, 315 )
 rotation = -6.28319
-current = true
 zoom = Vector2( 2, 2 )
 limit_left = 0
 limit_right = 2034
