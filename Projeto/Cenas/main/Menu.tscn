@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/MENUBILU.jpg" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
-size = 130
+size = 55
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
@@ -19,13 +19,16 @@ texture = ExtResource( 3 )
 
 [node name="Button" type="Button" parent="Menubilu"]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 303.89
-margin_top = 302.087
-margin_right = 1273.89
-margin_bottom = 439.087
+margin_left = 554.664
+margin_top = 305.286
+margin_right = 772.664
+margin_bottom = 367.286
+rect_rotation = 13.0
+rect_scale = Vector2( 2, 2 )
+mouse_default_cursor_shape = 2
 custom_fonts/font = SubResource( 1 )
-toggle_mode = true
-text = "Lute "
+action_mode = 0
+text = "Sobreviva!"
 flat = true
 icon_align = 1
 
