@@ -1,7 +1,5 @@
 extends Sprite
 
-signal tapete_comprado
-signal blue_comprado
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -9,6 +7,8 @@ signal blue_comprado
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	for button in get_tree().get_nodes_in_group("items_buttons"):
+		button.connect("pressed", self, "buy_item",[button.name])
 	pass # Replace with function body.
 
 
@@ -16,41 +16,31 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func buy_item(item):
+	if GameManager.score >= 5:
+		GameManager.score -= 5
+		GameManager.itens_comprados[item] = true
+		get_node("Menu/" + item).hide()
 
 func _on_shop_pressed():
-	$Menu/workButton.hide()
-	$Menu/shop.hide()
-	$Menu/buy1.show()
-	$Menu/buy2.show()
+	for item in get_tree().get_nodes_in_group("items_buttons"):
+		print(item.name)
+		if GameManager.itens_comprados[item.name] == true:
+			get_node("Menu/" + item.name).hide()
+		else:
+			get_node("Menu/" + item.name).show()
 	$back.show()
 	pass # Replace with function body.
 
 
-func _on_buy1_pressed():
-	if GameManager.score >= 5:
-		GameManager.score -= 5
-		emit_signal("tapete_comprado")
-		$Menu/buy1.hide()
-		GameManager.tapeteComprado = true
-	pass # Replace with function body.
 
-
-func _on_buy2_pressed():
-	if GameManager.score >= 5:
-		GameManager.score -= 5
-		emit_signal("blue_comprado")
-		$Menu/buy2.hide()
-		GameManager.bancoComprado = true
-	pass # Replace with function body.
 
 
 func _on_back_pressed():
-	$Menu/buy1.show()
-	$Menu/buy2.show()
+	
 	$Menu/workButton.show()
 	$Menu/shop.show()
-	$Menu/buy1.hide()
-	$Menu/buy2.hide()
+	
 	$back.hide()
 
 	pass # Replace with function body.

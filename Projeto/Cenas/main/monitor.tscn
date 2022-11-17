@@ -58,7 +58,7 @@ flat = true
 icon_align = 1
 expand_icon = true
 
-[node name="buy1" type="Button" parent="Menu"]
+[node name="banco_azul" type="Button" parent="Menu" groups=["items_buttons"]]
 visible = false
 margin_left = 71.9112
 margin_top = 32.446
@@ -67,7 +67,7 @@ margin_bottom = 69.446
 rect_pivot_offset = Vector2( 44.7322, 24.5373 )
 text = "Tapete"
 
-[node name="Label" type="Label" parent="Menu/buy1"]
+[node name="Label" type="Label" parent="Menu/banco_azul"]
 margin_left = 7.54968
 margin_top = 43.5996
 margin_right = 47.5497
@@ -76,7 +76,7 @@ text = "5$"
 align = 1
 autowrap = true
 
-[node name="buy2" type="Button" parent="Menu"]
+[node name="tapete" type="Button" parent="Menu" groups=["items_buttons"]]
 visible = false
 margin_left = 183.27
 margin_top = 33.0543
@@ -85,7 +85,7 @@ margin_bottom = 70.0543
 rect_pivot_offset = Vector2( 44.7322, 24.5373 )
 text = "Cadeira"
 
-[node name="Label" type="Label" parent="Menu/buy2"]
+[node name="Label" type="Label" parent="Menu/tapete"]
 margin_left = 10.0031
 margin_top = 41.9774
 margin_right = 50.0031
@@ -97,5 +97,3 @@ autowrap = true
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Menu/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Menu/shop" to="." method="_on_shop_pressed"]
-[connection signal="pressed" from="Menu/buy1" to="." method="_on_buy1_pressed"]
-[connection signal="pressed" from="Menu/buy2" to="." method="_on_buy2_pressed"]

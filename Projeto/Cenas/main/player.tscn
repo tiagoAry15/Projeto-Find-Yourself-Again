@@ -175,3 +175,5 @@ animation = "idle_left"
 position = Vector2( -1.53845, 63.8461 )
 rotation = 1.5708
 shape = SubResource( 28 )
+
+[connection signal="working" from="." to="." method="_on_KinematicBody2D_working"]
