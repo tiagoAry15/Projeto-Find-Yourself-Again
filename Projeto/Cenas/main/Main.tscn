@@ -12,9 +12,11 @@ script = ExtResource( 5 )
 [node name="Room" parent="." instance=ExtResource( 2 )]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 981, 231 )
+position = Vector2( 1006, 248 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 
 [node name="monitor" parent="." instance=ExtResource( 4 )]
 visible = false
+
+[connection signal="update_health" from="KinematicBody2D" to="." method="_on_KinematicBody2D_update_health"]

@@ -1,20 +1,17 @@
 extends Node2D
 
-
+signal is_working
 func _process(delta):
-	if GameManager.tapeteComprado == true:
-		$Cenario/Art75.show()
-	if GameManager.bancoComprado == true:
-		$TableRoundBlue.show()
+
 	pass
 
 
 
 func _on_Area2D_body_entered(body):
-	print("teste")
 	if body is KinematicBody2D:
+		emit_signal("is_working")
 		get_tree().change_scene("res://Cenas/main/monitor.tscn")
-
+		
 
 
 
