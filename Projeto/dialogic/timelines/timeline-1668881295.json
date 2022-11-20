@@ -1,0 +1,83 @@
+{
+	"events": [
+		{
+			"animation": "2-fade_in_up.gd",
+			"animation_length": 1,
+			"change_mirror_portrait": false,
+			"change_z_index": false,
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_002",
+			"mirror_portrait": false,
+			"portrait": "Default",
+			"portrait_definition": "",
+			"position": {
+				"0": false,
+				"1": false,
+				"2": false,
+				"3": false,
+				"4": false
+			},
+			"type": 0,
+			"z_index": 0
+		},
+		{
+			"character": "",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Seja bem vindo ao Find Yourself Again"
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Aviso! Esse jogo remete a situações da realidade e pode ativar gatilhos! Deseja continuar ?"
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_010",
+			"options": [
+
+			],
+			"portrait": "",
+			"question": "Sabendo disso... Deseja continuar ?"
+		},
+		{
+			"choice": "Sim",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"change_scene": "res://Cenas/main/Main.tscn",
+			"event_id": "dialogic_041"
+		},
+		{
+			"choice": "Não",
+			"condition": "",
+			"definition": "",
+			"event_id": "dialogic_011",
+			"value": ""
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Fico triste por você estar nessa situação... O site a seguir talvez lhe ajude..."
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": " O CVV – Centro de Valorização da Vida realiza apoio emocional e prevenção do suicídio, atendendo voluntária e gratuitamente todas as pessoas que querem e precisam conversar, sob total sigilo por telefone, email e chat 24 horas todos os dias."
+		},
+		{
+			"event_id": "dialogic_013"
+		}
+	],
+	"metadata": {
+		"dialogic-version": "1.4.5",
+		"file": "timeline-1668881295.json",
+		"name": "terms"
+	}
+}

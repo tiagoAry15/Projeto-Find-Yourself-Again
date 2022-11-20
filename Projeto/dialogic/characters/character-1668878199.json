@@ -1,0 +1,21 @@
+{
+	"color": "#ff000000",
+	"description": "",
+	"display_name": "????",
+	"display_name_bool": true,
+	"id": "character-1668878199.json",
+	"mirror_portraits": true,
+	"name": "????",
+	"nickname": "",
+	"nickname_bool": false,
+	"offset_x": 0,
+	"offset_y": 100,
+	"portraits": [
+		{
+			"name": "Default",
+			"path": "res://components/player/unicorn_atlaspretogrande.png"
+		}
+	],
+	"scale": 100,
+	"theme": "default-theme.cfg"
+}
