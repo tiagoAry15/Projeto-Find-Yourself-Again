@@ -7,6 +7,7 @@ extends Sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	for button in get_tree().get_nodes_in_group("items_buttons"):
 		button.connect("pressed", self, "buy_item",[button.name])
 	pass # Replace with function body.
@@ -19,16 +20,17 @@ func _ready():
 func buy_item(item):
 	if GameManager.score >= 5:
 		GameManager.score -= 5
-		GameManager.itens_comprados[item] = true
+		GameManager.items[item].comprado = true
 		get_node("Menu/" + item).hide()
 
 func _on_shop_pressed():
 	for item in get_tree().get_nodes_in_group("items_buttons"):
-		print(item.name)
-		if GameManager.itens_comprados[item.name] == true:
-			get_node("Menu/" + item.name).hide()
-		else:
+		
+		if GameManager.items[item.name].comprado == false:
+			print(GameManager.items[item.name])
 			get_node("Menu/" + item.name).show()
+		else:
+			get_node("Menu/" + item.name).hide()
 	$back.show()
 	pass # Replace with function body.
 
@@ -47,5 +49,6 @@ func _on_back_pressed():
 
 
 func _on_exit_pressed():
+	GameManager.save_data()
 	get_tree().change_scene("res://Cenas/main/Main.tscn")
 	pass # Replace with function body.

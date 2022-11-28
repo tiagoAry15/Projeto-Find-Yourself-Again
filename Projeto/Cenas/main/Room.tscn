@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/wall shelving 1.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/window_curtain_peach_a.png" type="Texture" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://grama.tres" type="TileSet" id=28]
 [ext_resource path="res://cerca.tres" type="TileSet" id=29]
 [ext_resource path="res://Cenas/main/levelRoom.gd" type="Script" id=30]
+[ext_resource path="res://item.gd" type="Script" id=31]
 
 [sub_resource type="Animation" id=22]
 resource_name = "CEU"
@@ -357,6 +358,9 @@ shape = SubResource( 18 )
 position = Vector2( 1245, 456 )
 scale = Vector2( 0.786982, 1.01183 )
 texture = ExtResource( 11 )
+script = ExtResource( 31 )
+id = "banco_azul"
+price = 5.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="banco_azul"]
 
@@ -671,11 +675,11 @@ shape = SubResource( 3 )
 position = Vector2( 1113, 555 )
 shape = SubResource( 2 )
 
-[node name="tapete" type="Sprite" parent="."]
-visible = false
+[node name="tapete" type="Sprite" parent="." groups=["interactive_objects"]]
 modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 972, 338 )
 scale = Vector2( 5, 6 )
 texture = ExtResource( 15 )
+script = ExtResource( 31 )
 
 [connection signal="body_entered" from="Cenario/Desk/cadeira_desk/Area2D" to="." method="_on_Area2D_body_entered"]
