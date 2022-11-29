@@ -22,19 +22,6 @@ func buy_item(item):
 		GameManager.itens_comprados[item] = true
 		get_node("Menu/" + item).hide()
 
-func _on_shop_pressed():
-	for item in get_tree().get_nodes_in_group("items_buttons"):
-		print(item.name)
-		if GameManager.itens_comprados[item.name] == true:
-			get_node("Menu/" + item.name).hide()
-		else:
-			get_node("Menu/" + item.name).show()
-	$back.show()
-	pass # Replace with function body.
-
-
-
-
 
 func _on_back_pressed():
 	
@@ -49,3 +36,20 @@ func _on_back_pressed():
 func _on_exit_pressed():
 	get_tree().change_scene("res://Cenas/main/Main.tscn")
 	pass # Replace with function body.
+
+
+func _on_Button_Game_pressed():
+	get_tree().change_scene("res://Cenas/minigame/pong.tscn")
+
+
+func _on_Button_Shop_pressed():
+	get_tree().change_scene("res://Cenas/main/Marketplace.tscn")
+	
+	
+	for item in get_tree().get_nodes_in_group("items_buttons"):
+		print(item.name)
+		if GameManager.itens_comprados[item.name] == true:
+			get_node("Menu/" + item.name).hide()
+		else:
+			get_node("Menu/" + item.name).show()
+	$back.show()

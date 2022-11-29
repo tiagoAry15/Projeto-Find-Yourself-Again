@@ -11,7 +11,8 @@ func _ready():
 	for item in GameManager.itens_comprados:
 		if GameManager.itens_comprados[item] == false:
 			get_node("Room").get_node(item).hide()
-			
+		else:
+			get_node("Room").get_node(item).show()
 		
 
 

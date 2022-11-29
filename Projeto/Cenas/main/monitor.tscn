@@ -4,11 +4,11 @@
 [ext_resource path="res://Cenas/main/score.gd" type="Script" id=2]
 [ext_resource path="res://Cenas/main/monitor.gd" type="Script" id=3]
 [ext_resource path="res://assets/assets_cenario/shop.png" type="Texture" id=4]
-[ext_resource path="res://assets/assets_cenario/monitor.png" type="Texture" id=5]
+[ext_resource path="res://assets/dektopos.jpg" type="Texture" id=5]
 
 [node name="monitor" type="Sprite"]
-position = Vector2( 512, 299.5 )
-scale = Vector2( 2.63239, 2.04467 )
+position = Vector2( 511, 300 )
+scale = Vector2( 0.532292, 0.557407 )
 texture = ExtResource( 5 )
 script = ExtResource( 3 )
 
@@ -25,10 +25,10 @@ anchor_left = 0.678
 anchor_top = 0.743
 anchor_right = 0.678
 anchor_bottom = 0.743
-margin_left = -428.798
-margin_top = -263.767
-margin_right = -121.798
-margin_bottom = -73.7672
+margin_left = -43.5878
+margin_top = -995.136
+margin_right = 470.412
+margin_bottom = -631.136
 
 [node name="exit" type="Button" parent="Menu"]
 margin_left = 293.118
@@ -36,9 +36,6 @@ margin_top = -51.7108
 margin_right = 316.118
 margin_bottom = -31.7108
 text = "X"
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="score" type="Label" parent="Menu"]
 margin_left = 13.212
@@ -65,7 +62,7 @@ margin_top = 32.446
 margin_right = 126.911
 margin_bottom = 69.446
 rect_pivot_offset = Vector2( 44.7322, 24.5373 )
-text = "Tapete"
+text = "Banco"
 
 [node name="Label" type="Label" parent="Menu/banco_azul"]
 margin_left = 7.54968
@@ -83,7 +80,7 @@ margin_top = 33.0543
 margin_right = 242.27
 margin_bottom = 70.0543
 rect_pivot_offset = Vector2( 44.7322, 24.5373 )
-text = "Cadeira"
+text = "Tapete"
 
 [node name="Label" type="Label" parent="Menu/tapete"]
 margin_left = 10.0031
@@ -94,6 +91,27 @@ text = "5$"
 align = 1
 autowrap = true
 
+[node name="Button_Game" type="Button" parent="."]
+margin_left = -815.766
+margin_top = -462.985
+margin_right = -674.766
+margin_bottom = -333.985
+flat = true
+
+[node name="Button_Work" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="Button_Shop" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+
+[node name="Button_News" type="Button" parent="."]
+margin_right = 12.0
+margin_bottom = 20.0
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Menu/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Menu/shop" to="." method="_on_shop_pressed"]
+[connection signal="pressed" from="Button_Game" to="." method="_on_Button_Game_pressed"]
+[connection signal="pressed" from="Button_Shop" to="." method="_on_Button_Shop_pressed"]

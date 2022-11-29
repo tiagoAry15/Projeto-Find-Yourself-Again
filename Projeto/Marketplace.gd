@@ -41,3 +41,10 @@ func _on_monitor_blue_comprado():
 func _on_monitor_tapete_comprado():
 	$Cenario/Art75.show()
 	pass # Replace with function body.
+
+func _on_Halter_pressed():
+	$Cenario/Halter.show()
+
+
+func _on_P_pressed():
+	$Cenario/Piano3.show()
