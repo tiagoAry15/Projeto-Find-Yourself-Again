@@ -8,9 +8,18 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	set_items()
+	$CanvasLayer/ColorRect.color = Color(0,0,0,0)
+	$CanvasLayer/HBoxContainer.rect_position = Vector2(946,7)
+	$KinematicBody2D.position = GameManager.playerPosition
+	$CanvasLayer.connect("updating_day", self,"_on_day_updated")	
+	
+func _process(delta):
+	$CanvasLayer/HBoxContainer/Days.text = str(GameManager.days)
+	
+func set_items():
 	if GameManager.firstTime == true:
 		GameManager.delete_data()
-		print("new game")
 		GameManager.firstTime = false
 		
 	if GameManager.items.empty():
@@ -25,7 +34,7 @@ func _ready():
 		print("itens adicionados")
 		GameManager.firstTime = false
 		GameManager.save_data()
-			
+		
 	else:
 		print("carregando")
 		#GameManager.load_data()
@@ -33,11 +42,11 @@ func _ready():
 		if GameManager.items[item.name].comprado == false:
 			print("escondido")
 			item.hide()
+			
 		else:
 			item.show()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+			
+func _on_day_updated():
+	GameManager.days += 1
+	
 

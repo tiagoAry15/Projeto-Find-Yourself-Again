@@ -3,14 +3,14 @@ extends Node2D
 signal is_working
 
 func _ready():
-	for item in get_tree().get_nodes_in_group("interactive_objects"):
-		print(GameManager.items)
-		
+	for item in get_tree().get_nodes_in_group("objects"):
+		if len(item.get_children()) != 0:
+			print(item.get_children()[0])
+	
+	$CanvasModulate.connect("update_day",self,"_on_day_updated")
+	
 			
-func _on_Area2D_body_entered(body):
-	if body is KinematicBody2D:
-		emit_signal("is_working")
-		get_tree().change_scene("res://Cenas/main/monitor.tscn")
+
 	
 func _on_exit_pressed():
 	$monitor.hide()
@@ -31,3 +31,6 @@ func _on_back_pressed():
 	$monitor/Menu/shop.show()
 	$monitor/Menu/buy1.hide()
 	$monitor/Menu/buy2.hide()
+
+
+

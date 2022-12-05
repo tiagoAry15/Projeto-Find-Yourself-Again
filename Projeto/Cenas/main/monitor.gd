@@ -27,7 +27,7 @@ func _on_shop_pressed():
 	for item in get_tree().get_nodes_in_group("items_buttons"):
 		
 		if GameManager.items[item.name].comprado == false:
-			print(GameManager.items[item.name])
+		
 			get_node("Menu/" + item.name).show()
 		else:
 			get_node("Menu/" + item.name).hide()

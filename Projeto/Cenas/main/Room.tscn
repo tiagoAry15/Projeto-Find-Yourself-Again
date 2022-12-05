@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/wall shelving 1.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/window_curtain_peach_a.png" type="Texture" id=2]
@@ -31,6 +31,7 @@
 [ext_resource path="res://cerca.tres" type="TileSet" id=29]
 [ext_resource path="res://Cenas/main/levelRoom.gd" type="Script" id=30]
 [ext_resource path="res://item.gd" type="Script" id=31]
+[ext_resource path="res://assets/light.png" type="Texture" id=33]
 
 [sub_resource type="Animation" id=22]
 resource_name = "CEU"
@@ -157,12 +158,23 @@ a = Vector2( 180, 463.333 )
 b = Vector2( -443.333, 63.3333 )
 
 [sub_resource type="SegmentShape2D" id=12]
-a = Vector2( -124.733, 100.264 )
-b = Vector2( -249.558, 402.546 )
+a = Vector2( -96.5928, 48.301 )
+b = Vector2( -186.435, 249.596 )
 
-[sub_resource type="CapsuleShape2D" id=26]
-radius = 315.0
-height = 439.999
+[sub_resource type="CircleShape2D" id=30]
+radius = 521.033
+
+[sub_resource type="SegmentShape2D" id=31]
+a = Vector2( 0, -192 )
+b = Vector2( 336, 6.00024 )
+
+[sub_resource type="SegmentShape2D" id=32]
+a = Vector2( 363, 271 )
+b = Vector2( 33, 457 )
+
+[sub_resource type="SegmentShape2D" id=33]
+a = Vector2( -303, 265 )
+b = Vector2( 24, 48 )
 
 [sub_resource type="SegmentShape2D" id=10]
 a = Vector2( 520, 140 )
@@ -180,9 +192,16 @@ b = Vector2( -83.3333, 486.667 )
 a = Vector2( -83.3333, 486.667 )
 b = Vector2( -290, 393.333 )
 
+[sub_resource type="CapsuleShape2D" id=34]
+radius = 18.2065
+height = 62.455
+
+[sub_resource type="RectangleShape2D" id=29]
+extents = Vector2( 61, 57.9297 )
+
 [sub_resource type="Animation" id=16]
 resource_name = "Animation_Day_Night"
-length = 24.0
+length = 30.0
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:color")
 tracks/0/interp = 1
@@ -190,10 +209,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3, 5, 7, 12, 14, 17, 19, 22, 24 ),
+"times": PoolRealArray( 0, 3, 5, 7.5, 10, 12.6, 15, 20, 25, 30 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.12549, 0.137255, 0.203922, 1 ), Color( 0.12549, 0.137255, 0.203922, 1 ), Color( 0.870588, 0.741176, 0.490196, 1 ), Color( 0.894118, 0.85098, 0.764706, 1 ), Color( 1, 1, 1, 1 ), Color( 0.94902, 0.878431, 0.733333, 1 ), Color( 0.760784, 0.686275, 0.529412, 1 ), Color( 0.529412, 0.572549, 0.760784, 1 ), Color( 0.207843, 0.219608, 0.27451, 1 ), Color( 0.12549, 0.137255, 0.203922, 1 ) ]
+"values": [ Color( 0.156863, 0.176471, 0.294118, 1 ), Color( 0.156863, 0.176471, 0.294118, 1 ), Color( 0.870588, 0.741176, 0.490196, 1 ), Color( 0.894118, 0.85098, 0.764706, 1 ), Color( 1, 1, 1, 1 ), Color( 0.94902, 0.878431, 0.733333, 1 ), Color( 0.760784, 0.686275, 0.529412, 1 ), Color( 0.529412, 0.572549, 0.760784, 1 ), Color( 0.207843, 0.219608, 0.27451, 1 ), Color( 0.156863, 0.176471, 0.294118, 1 ) ]
 }
 
 [sub_resource type="Animation" id=17]
@@ -329,7 +348,7 @@ mode = 1
 tile_set = ExtResource( 29 )
 cell_size = Vector2( 256, 128 )
 format = 1
-tile_data = PoolIntArray( -720900, 5, 0, -720899, 5, 0, -720898, 5, 0, -720897, 5, 0, -786432, 5, 0, -786431, 5, 0, -786430, 5, 0, -786429, 5, 0, -786428, 5, 0, -786427, 5, 0, -786426, 5, 0, -786425, 5, 0, -786424, 5, 0, -786423, 5, 0, -786422, 5, 0, -655364, 4, 0, -655363, 6, 0, -655362, 6, 0, -655361, 6, 0, -720896, 6, 0, -720895, 6, 0, -720894, 6, 0, -720893, 6, 0, -720892, 6, 0, -720891, 6, 0, -720890, 6, 0, -720889, 6, 0, -720888, 6, 0, -720887, 6, 0, -720886, 7, 0, -720885, 4, 0, -589829, 7, 0, -589828, 4, 0, -655350, 7, 0, -655349, 4, 0, -524293, 7, 0, -524292, 4, 0, -589814, 7, 0, -589813, 4, 0, -458757, 7, 0, -458756, 4, 0, -524278, 7, 0, -524277, 4, 0, -393221, 7, 0, -393220, 4, 0, -458742, 7, 0, -458741, 4, 0, -327685, 7, 0, -327684, 4, 0, -393206, 7, 0, -393205, 4, 0, -262149, 7, 0, -262148, 4, 0, -327670, 7, 0, -327669, 4, 0, -196613, 7, 0, -196612, 4, 0, -262134, 7, 0, -262133, 4, 0, -131077, 7, 0, -131076, 4, 0, -196598, 7, 0, -196597, 4, 0, -65541, 7, 0, -65540, 4, 0, -131062, 7, 0, -131061, 4, 0, -5, 7, 0, -4, 4, 0, -65526, 7, 0, -65525, 4, 0, 65531, 7, 0, 65532, 4, 0, 10, 7, 0, 11, 4, 0, 131067, 7, 0, 131068, 4, 0, 65546, 7, 0, 65547, 4, 0, 196603, 7, 0, 196604, 4, 0, 131082, 7, 0, 131083, 4, 0, 262140, 4, 0, 262141, 5, 0, 262142, 5, 0, 262143, 5, 0, 196608, 5, 0, 196609, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196617, 5, 0, 196618, 7, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0 )
+tile_data = PoolIntArray( -720900, 5, 0, -720899, 5, 0, -720898, 5, 0, -720897, 5, 0, -786432, 5, 0, -786431, 5, 0, -786430, 5, 0, -786429, 5, 0, -786428, 5, 0, -786427, 5, 0, -786426, 5, 0, -786425, 5, 0, -786422, 5, 0, -655364, 4, 0, -655363, 6, 0, -655362, 6, 0, -655361, 6, 0, -720896, 6, 0, -720895, 6, 0, -720894, 6, 0, -720893, 6, 0, -720892, 6, 0, -720891, 6, 0, -720890, 6, 0, -720889, 6, 0, -720888, 6, 0, -720885, 4, 0, -589828, 4, 0, -655349, 4, 0, -524292, 4, 0, -589814, 7, 0, -458756, 4, 0, -524278, 7, 0, -393220, 4, 0, -458742, 7, 0, -327684, 4, 0, -393206, 7, 0, -393205, 4, 0, -262148, 4, 0, -327670, 7, 0, -327669, 4, 0, -196612, 4, 0, -262134, 7, 0, -262133, 4, 0, -131076, 4, 0, -196598, 7, 0, -196597, 4, 0, -65540, 4, 0, -131062, 7, 0, -131061, 4, 0, -4, 4, 0, -65526, 7, 0, -65525, 4, 0, 65532, 4, 0, 10, 7, 0, 11, 4, 0, 131068, 4, 0, 65546, 7, 0, 65547, 4, 0, 196604, 4, 0, 131082, 7, 0, 131083, 4, 0, 262139, 7, 0, 262141, 5, 0, 262142, 5, 0, 262143, 5, 0, 196608, 5, 0, 196609, 5, 0, 196613, 5, 0, 196614, 5, 0, 196615, 5, 0, 196616, 5, 0, 196618, 7, 0, 327676, 6, 0, 327677, 6, 0, 327678, 6, 0, 327679, 6, 0, 262144, 6, 0, 262145, 6, 0, 262146, 6, 0, 262147, 6, 0, 262148, 6, 0, 262150, 6, 0, 262151, 6, 0, 262152, 6, 0, 262153, 6, 0, 262154, 6, 0 )
 
 [node name="WoodTable1" type="Sprite" parent="."]
 position = Vector2( 1080, 761 )
@@ -354,7 +373,7 @@ shape = SubResource( 1 )
 position = Vector2( 1.53638, -48.8105 )
 shape = SubResource( 18 )
 
-[node name="banco_azul" type="Sprite" parent="." groups=["interactive_objects"]]
+[node name="banco_azul" type="Sprite" parent="." groups=["interactive_objects", "objects"]]
 position = Vector2( 1245, 456 )
 scale = Vector2( 0.786982, 1.01183 )
 texture = ExtResource( 11 )
@@ -362,7 +381,7 @@ script = ExtResource( 31 )
 id = "banco_azul"
 price = 5.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="banco_azul"]
+[node name="StaticBody2D" type="Area2D" parent="banco_azul"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="banco_azul/StaticBody2D"]
 position = Vector2( 0.635132, -17.7896 )
@@ -468,7 +487,7 @@ flip_h = true
 [node name="Desk" type="Sprite" parent="Cenario"]
 position = Vector2( 1663, 279 )
 scale = Vector2( 0.25, 0.25 )
-z_index = 2
+z_index = 1
 texture = ExtResource( 16 )
 
 [node name="LargeCandle1" type="Sprite" parent="Cenario/Desk"]
@@ -478,60 +497,86 @@ texture = ExtResource( 8 )
 [node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Desk"]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Desk/StaticBody2D"]
+position = Vector2( -12, 4 )
 shape = SubResource( 13 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Desk"]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Desk/StaticBody2D2"]
-position = Vector2( 616.667, 273.333 )
+position = Vector2( 628, 296 )
 rotation = 0.656244
 shape = SubResource( 12 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Desk"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk/StaticBody2D3"]
-position = Vector2( -10, -103.333 )
+position = Vector2( -168, -324 )
 rotation = 0.656244
 shape = SubResource( 12 )
 
-[node name="cadeira_desk" type="Sprite" parent="Cenario/Desk"]
+[node name="cadeira_desk" type="Sprite" parent="Cenario/Desk" groups=["objects"]]
 position = Vector2( -270, 163.333 )
 scale = Vector2( 0.666667, 0.666667 )
-z_index = 2
 texture = ExtResource( 3 )
+script = ExtResource( 31 )
+comprado = true
 
 [node name="Area2D" type="Area2D" parent="Cenario/Desk/cadeira_desk"]
+monitoring = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk/cadeira_desk/Area2D"]
-position = Vector2( 10, -34.9995 )
-shape = SubResource( 26 )
+position = Vector2( -27, -22.9995 )
+shape = SubResource( 30 )
 one_way_collision_margin = 0.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Desk/cadeira_desk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk/cadeira_desk/StaticBody2D"]
+position = Vector2( -309, 457 )
+shape = SubResource( 31 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Desk/cadeira_desk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk/cadeira_desk/StaticBody2D2"]
+shape = SubResource( 32 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Desk/cadeira_desk"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Desk/cadeira_desk/StaticBody2D3"]
+position = Vector2( -3, 1.00049 )
+shape = SubResource( 33 )
 
 [node name="Lamp" type="Sprite" parent="Cenario"]
 position = Vector2( 889, -195 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
 
-[node name="Bed1" type="Sprite" parent="Cenario"]
+[node name="Light2D" type="Light2D" parent="Cenario/Lamp"]
+position = Vector2( 10, -99.9999 )
+scale = Vector2( 1.29102, 1.11035 )
+texture = ExtResource( 33 )
+color = Color( 0.992157, 1, 0, 1 )
+
+[node name="Bed" type="Sprite" parent="Cenario" groups=["objects"]]
 position = Vector2( 876, -75 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 6 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Bed1"]
+[node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Bed"]
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Bed1/StaticBody2D"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Cenario/Bed/StaticBody2D"]
 shape = SubResource( 10 )
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Bed1"]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Cenario/Bed"]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Bed1/StaticBody2D2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Cenario/Bed/StaticBody2D2"]
 position = Vector2( 396.667, -193.333 )
 rotation = 0.575959
 shape = SubResource( 9 )
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Bed1"]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Cenario/Bed"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Bed1/StaticBody2D3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Bed/StaticBody2D3"]
 position = Vector2( 46.6665, 36.6666 )
 rotation = 0.575959
 shape = SubResource( 9 )
@@ -581,24 +626,40 @@ position = Vector2( 1024, -233 )
 texture = ExtResource( 12 )
 flip_h = true
 
-[node name="DetailedDoor4" type="Sprite" parent="Cenario"]
+[node name="Door" type="Sprite" parent="Cenario" groups=["objects"]]
 position = Vector2( 1258, -56 )
 rotation = 0.0698132
 texture = ExtResource( 13 )
+
+[node name="Area2D" type="StaticBody2D" parent="Cenario/Door"]
+position = Vector2( -28.8947, 74.1963 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Door/Area2D"]
+position = Vector2( 30.9453, -16.1981 )
+rotation = -1.13446
+scale = Vector2( 1, 1 )
+shape = SubResource( 34 )
 
 [node name="Moon1" type="Sprite" parent="Cenario"]
 position = Vector2( 527, -45 )
 scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 9 )
 
-[node name="SwitchWallOffS" type="Sprite" parent="Cenario"]
+[node name="SwitchWallOffS" type="Sprite" parent="Cenario" groups=["objects"]]
 position = Vector2( 1308, -74 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 19 )
 
+[node name="Area2D" type="Area2D" parent="Cenario/SwitchWallOffS"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/SwitchWallOffS/Area2D"]
+position = Vector2( 52, 210 )
+shape = SubResource( 29 )
+disabled = true
+
 [node name="RugSmallRed" type="Sprite" parent="Cenario"]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 1236, 36 )
+position = Vector2( 1228, 32 )
 rotation = 0.0698132
 scale = Vector2( 1.4, 1.2 )
 texture = ExtResource( 21 )
@@ -683,3 +744,4 @@ texture = ExtResource( 15 )
 script = ExtResource( 31 )
 
 [connection signal="body_entered" from="Cenario/Desk/cadeira_desk/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="area_entered" from="Cenario/SwitchWallOffS/Area2D" to="." method="_on_Area2D_area_entered"]

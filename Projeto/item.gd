@@ -2,6 +2,7 @@ extends Node2D
 
 class_name Item
 
+
 export(String) var id
 export(int) var increase_health
 export(float) var price
