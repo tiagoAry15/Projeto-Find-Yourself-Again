@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/A Tender Feeling.mp3-0e6a4d80b53aa60782254bdf5f9a96a6.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/A Tender Feeling.mp3"
+dest_files=[ "res://.import/A Tender Feeling.mp3-0e6a4d80b53aa60782254bdf5f9a96a6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

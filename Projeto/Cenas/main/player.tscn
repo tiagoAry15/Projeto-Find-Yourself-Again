@@ -1,7 +1,10 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://components/player/player.gd" type="Script" id=1]
 [ext_resource path="res://components/player/unicorn_atlas.png" type="Texture" id=2]
+[ext_resource path="res://assets/Font/SnesItalic-1G9Be.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/keyboard.png" type="Texture" id=4]
+[ext_resource path="res://assets/terraria.png" type="Texture" id=5]
 
 [sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 2 )
@@ -158,11 +161,20 @@ animations = [ {
 "speed": 12.0
 } ]
 
+[sub_resource type="DynamicFont" id=32]
+size = 40
+outline_color = Color( 0.258824, 1, 0, 1 )
+font_data = ExtResource( 3 )
+
 [sub_resource type="CapsuleShape2D" id=28]
 radius = 12.3077
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
-position = Vector2( 526, 241 )
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 5 )
+region = Rect2( 1020, 300, 48, 48 )
+
+[node name="Character" type="KinematicBody2D"]
+position = Vector2( 306, 102 )
 scale = Vector2( 1.3, 1.3 )
 z_index = 1
 script = ExtResource( 1 )
@@ -171,9 +183,33 @@ script = ExtResource( 1 )
 frames = SubResource( 8 )
 animation = "idle_left"
 
+[node name="HealthBar" type="Label" parent="."]
+modulate = Color( 0.164706, 1, 0, 1 )
+margin_left = -35.0
+margin_top = -108.0
+margin_right = 34.0
+margin_bottom = -29.0
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 32 )
+text = "255
+"
+align = 1
+percent_visible = -0.333333
+
+[node name="InteractionButton" type="Sprite" parent="."]
+visible = false
+position = Vector2( -73.8462, -75.3846 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 342, 103, 52, 49 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.53845, 63.8461 )
 rotation = 1.5708
 shape = SubResource( 28 )
+
+[node name="Emotion" type="Sprite" parent="."]
+position = Vector2( 2.30769, -140 )
+texture = SubResource( 33 )
 
 [connection signal="working" from="." to="." method="_on_KinematicBody2D_working"]
