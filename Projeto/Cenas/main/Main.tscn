@@ -20,7 +20,10 @@ z_index = 2
 
 [node name="monitor" parent="." instance=ExtResource( 4 )]
 visible = false
+<<<<<<< Updated upstream
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
 
 [connection signal="update_health" from="KinematicBody2D" to="." method="_on_KinematicBody2D_update_health"]
+=======
+>>>>>>> Stashed changes

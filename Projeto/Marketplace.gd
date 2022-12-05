@@ -2,8 +2,8 @@ extends Node2D
 
 signal is_working
 func _process(delta):
-
-	pass
+	$Pagina1/Score.text = "Saldo: " + str(GameManager.score)
+	$Pagina2/Score.text = "Saldo: " + str(GameManager.score)
 
 func _on_Area2D_body_entered(body):
 	if body is KinematicBody2D:
@@ -11,40 +11,71 @@ func _on_Area2D_body_entered(body):
 		get_tree().change_scene("res://Cenas/main/monitor.tscn")
 		
 
-func _on_buy1_pressed():
-	if GameManager.score >= 5:
-		GameManager.score -= 5
-		$Cenario/tapete.show()
-	
-
-
-func _on_buy2_pressed():
-	if GameManager.score >= 5:
-		GameManager.score -= 5
-		$Cenario/TableRoundBlue.show()
-
 
 func _on_back_pressed():
-	$monitor/Menu/buy1.show()
-	$monitor/Menu/buy2.show()
-	$monitor/Menu/workButton.show()
-	$monitor/Menu/shop.show()
-	$monitor/Menu/buy1.hide()
-	$monitor/Menu/buy2.hide()
+	get_tree().change_scene("res://Cenas/main/monitor.tscn")
 
-
-func _on_monitor_blue_comprado():
-	$TableRoundBlue.show()
-	pass # Replace with function body.
-
-
-func _on_monitor_tapete_comprado():
-	$Cenario/Art75.show()
-	pass # Replace with function body.
 
 func _on_Halter_pressed():
-	$Cenario/Halter.show()
+	if GameManager.itens_comprados["Halter"] == false:
+		if GameManager.score >= 5:
+			GameManager.score -= 5
+			GameManager.itens_comprados["Halter"] = true
 
 
 func _on_P_pressed():
-	$Cenario/Piano3.show()
+	if GameManager.itens_comprados["Piano3"] == false:
+		if GameManager.score >= 5:
+			GameManager.score -= 5
+			GameManager.itens_comprados["Piano3"] = true
+			
+
+
+func _on_Console_pressed():
+	if GameManager.itens_comprados["Console"] == false:
+		if GameManager.score >= 5:
+			GameManager.score -= 5
+			GameManager.itens_comprados["Console"] = true
+
+
+func _on_TextureButton_pressed():
+	if GameManager.itens_comprados["Art"] == false:
+		if GameManager.score >= 5:
+			GameManager.score -= 5
+			GameManager.itens_comprados["Art"] = true
+
+
+func _on_Books_pressed():
+	if GameManager.itens_comprados["Books"] == false:
+		if GameManager.score >= 5:
+			GameManager.score -= 5
+			GameManager.itens_comprados["Books"] = true
+
+
+func _on_Espelho_pressed():
+	if GameManager.itens_comprados["Mirror"] == false:
+		if GameManager.score >= 5:
+			GameManager.score -= 5
+			GameManager.itens_comprados["Mirror"] = true
+
+
+func _on_Comida_pressed():
+		if GameManager.score >= 3:
+			GameManager.score -= 3
+
+
+func _on_Remedio_pressed():
+		if GameManager.score >= 8:
+			GameManager.score -= 8
+
+
+func _on_Voltar2_pressed():
+	$Camera2D.offset(Vector2(1540 , 301))
+
+
+func _on_Voltar_pressed():
+		get_tree().change_scene("res://Cenas/main/monitor.tscn")
+
+
+func _on_VoltarPag1_pressed():
+	$Camera2D.offset(Vector2(512 , 301))

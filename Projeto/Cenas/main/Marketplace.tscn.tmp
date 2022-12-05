@@ -664,7 +664,7 @@ mouse_default_cursor_shape = 2
 flat = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 512, 301 )
+position = Vector2( 1540, 300 )
 current = true
 
 [connection signal="pressed" from="Pagina1/Halter/Halter" to="." method="_on_Halter_pressed"]
