@@ -23,6 +23,7 @@ func buy_item(item):
 		GameManager.items[item].comprado = true
 		get_node("Menu/" + item).hide()
 
+
 func _on_shop_pressed():
 	for item in get_tree().get_nodes_in_group("items_buttons"):
 		
@@ -33,8 +34,6 @@ func _on_shop_pressed():
 			get_node("Menu/" + item.name).hide()
 	$back.show()
 	pass # Replace with function body.
-
-
 
 
 
@@ -52,3 +51,10 @@ func _on_exit_pressed():
 	GameManager.save_data()
 	get_tree().change_scene("res://Cenas/main/Main.tscn")
 	pass # Replace with function body.
+
+
+func _on_Button_Game_pressed():
+	get_tree().change_scene("res://Cenas/minigame/pong.tscn")
+
+func _on_Button_Shop_pressed():
+	get_tree().change_scene("res://Cenas/main/Marketplace.tscn")

@@ -1,0 +1,256 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Marketplace.gd" type="Script" id=1]
+[ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Blocks/Piano 2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Dumbell.png" type="Texture" id=3]
+[ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/tv_a.png" type="Texture" id=4]
+[ext_resource path="res://assets/Consolo.png" type="Texture" id=5]
+[ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Books.png" type="Texture" id=6]
+[ext_resource path="res://assets/MPLACE.png" type="Texture" id=7]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.760784, 0.0666667, 0.0666667, 1 )
+
+[node name="Marketplace" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514, 303 )
+scale = Vector2( 1.03745, 0.961049 )
+texture = ExtResource( 7 )
+
+[node name="Halter" type="ColorRect" parent="Sprite"]
+margin_left = -316.16
+margin_top = -195.619
+margin_right = -142.16
+margin_bottom = -36.6195
+size_flags_stretch_ratio = 0.0
+
+[node name="Halter" type="TextureButton" parent="Sprite/Halter"]
+margin_right = 174.0
+margin_bottom = 159.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Sprite/Halter/Halter"]
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+
+[node name="Label" type="Label" parent="Sprite/Halter/Halter/ColorRect"]
+modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
+margin_top = 4.3631
+margin_right = 51.0
+margin_bottom = 23.3631
+text = "Halteres"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Sprite/Halter/Halter"]
+margin_left = 112.0
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "50 Reais"
+
+[node name="Console" type="ColorRect" parent="Sprite"]
+margin_left = -89.6429
+margin_top = -195.619
+margin_right = 84.3571
+margin_bottom = -36.6195
+size_flags_stretch_ratio = 0.0
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/Console"]
+margin_left = -45.3034
+margin_top = -40.5806
+margin_right = 224.697
+margin_bottom = 175.419
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 5 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Sprite/Console/TextureButton"]
+margin_left = 45.3035
+margin_top = 199.782
+margin_right = 219.303
+margin_bottom = 226.782
+color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+
+[node name="Label" type="Label" parent="Sprite/Console/TextureButton/ColorRect"]
+modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
+margin_left = 6.74728
+margin_top = 5.20264
+margin_right = 57.7473
+margin_bottom = 24.2026
+text = "C	onsole"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Sprite/Console/TextureButton"]
+margin_left = 157.116
+margin_top = 199.782
+margin_right = 219.116
+margin_bottom = 226.782
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "250 Reais"
+
+[node name="Planta" type="ColorRect" parent="Sprite"]
+margin_left = 139.766
+margin_top = -195.62
+margin_right = 313.766
+margin_bottom = -36.6195
+size_flags_stretch_ratio = 0.0
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/Planta"]
+margin_right = 174.0
+margin_bottom = 159.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Sprite/Planta/TextureButton"]
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+
+[node name="Label" type="Label" parent="Sprite/Planta/TextureButton/ColorRect"]
+modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
+margin_top = 4.3631
+margin_right = 51.0
+margin_bottom = 23.3631
+text = "Planta"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Sprite/Planta/TextureButton"]
+margin_left = 112.0
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "125 Reais"
+
+[node name="Piano" type="ColorRect" parent="Sprite"]
+margin_left = -314.232
+margin_top = 57.2292
+margin_right = -140.232
+margin_bottom = 216.229
+size_flags_stretch_ratio = 0.0
+
+[node name="P" type="TextureButton" parent="Sprite/Piano"]
+margin_right = 174.0
+margin_bottom = 159.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 2 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Sprite/Piano/P"]
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+
+[node name="Label" type="Label" parent="Sprite/Piano/P/ColorRect"]
+modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
+margin_top = 4.3631
+margin_right = 51.0
+margin_bottom = 23.3631
+text = "Piano"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Sprite/Piano/P"]
+margin_left = 112.0
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "100 Reais"
+
+[node name="Halter5" type="ColorRect" parent="Sprite"]
+margin_left = -89.6429
+margin_top = 57.2292
+margin_right = 84.3571
+margin_bottom = 216.229
+size_flags_stretch_ratio = 0.0
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/Halter5"]
+margin_right = 174.0
+margin_bottom = 159.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 6 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Sprite/Halter5/TextureButton"]
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+
+[node name="Label" type="Label" parent="Sprite/Halter5/TextureButton/ColorRect"]
+modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
+margin_top = 4.3631
+margin_right = 51.0
+margin_bottom = 23.3631
+text = "Books"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Sprite/Halter5/TextureButton"]
+margin_left = 112.0
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "100 Reais"
+
+[node name="Halter6" type="ColorRect" parent="Sprite"]
+margin_left = 139.766
+margin_top = 57.2292
+margin_right = 313.766
+margin_bottom = 216.229
+size_flags_stretch_ratio = 0.0
+
+[node name="TextureButton" type="TextureButton" parent="Sprite/Halter6"]
+self_modulate = Color( 0.196078, 0.188235, 0.188235, 1 )
+margin_right = 174.0
+margin_bottom = 159.0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="Sprite/Halter6/TextureButton"]
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
+
+[node name="Label" type="Label" parent="Sprite/Halter6/TextureButton/ColorRect"]
+modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
+margin_top = 4.3631
+margin_right = 51.0
+margin_bottom = 23.3631
+text = "Mesa e Tv"
+align = 1
+valign = 1
+
+[node name="Button" type="Button" parent="Sprite/Halter6/TextureButton"]
+margin_left = 112.0
+margin_top = 159.0
+margin_right = 174.0
+margin_bottom = 186.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_styles/normal = SubResource( 1 )
+text = "100 Reais"
+
+[connection signal="pressed" from="Sprite/Halter/Halter" to="." method="_on_Halter_pressed"]
+[connection signal="pressed" from="Sprite/Piano/P" to="." method="_on_P_pressed"]

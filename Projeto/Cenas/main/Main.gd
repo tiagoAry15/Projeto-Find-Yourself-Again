@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+
 	set_items()
 	$CanvasLayer/ColorRect.color = Color(0,0,0,0)
 	$CanvasLayer/HBoxContainer.rect_position = Vector2(946,7)
@@ -21,6 +22,7 @@ func set_items():
 	if GameManager.firstTime == true:
 		GameManager.delete_data()
 		GameManager.firstTime = false
+
 		
 	if GameManager.items.empty():
 		for item in get_node("Room").get_tree().get_nodes_in_group("interactive_objects"):
