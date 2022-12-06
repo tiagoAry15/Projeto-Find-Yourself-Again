@@ -4,7 +4,9 @@ extends Node
 
 var coinSound = preload("res://assets/sounds/smb_coin.wav")
 
-	
+func _ready():
+	$Promotion.visible = false
+
 func _process(delta):
 	$Boost.text = str(GameManager.SalaryBoost)+"x"
 

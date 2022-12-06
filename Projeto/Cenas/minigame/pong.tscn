@@ -5,12 +5,9 @@
 [ext_resource path="res://Cenas/minigame/bot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/minigame/levelPong.gd" type="Script" id=4]
 [ext_resource path="res://Cenas/main/score.gd" type="Script" id=5]
-
 [ext_resource path="res://assets/Font/8-BIT WONDER.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/sounds/smb_1-up.wav" type="AudioStream" id=7]
-[ext_resource path="res://assets/MPLACE.png" type="Texture" id=6]
-[ext_resource path="res://assets/Font/Newspaper.ttf" type="DynamicFontData" id=7]
-
+[ext_resource path="res://assets/MPLACE.png" type="Texture" id=8]
 
 [sub_resource type="GradientTexture2D" id=1]
 
