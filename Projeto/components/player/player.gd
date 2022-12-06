@@ -4,6 +4,7 @@ signal update_health
 signal working
 signal interact
 
+onready var opacityBW = get_node("UI/Control/ColorRect")
 
 var imagem = load("res://assets/terraria.png")
 var randomNumber = 0
@@ -143,9 +144,13 @@ func is_sleepy():
 	on_show_emotion("Sleepy")	
 
 func update_health(value):
-	GameManager.healthbar += value
+	if GameManager.healthbar > 1:
+		if GameManager.healthbar < 50:
+			$AudioStreamPlayer.play()
+		GameManager.healthbar += value
+		opacityBW.modulate.a8 += 2
 	$HealthBar.text = str(GameManager.healthbar)
-		
+	
 	
 
 

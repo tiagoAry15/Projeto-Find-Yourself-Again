@@ -571,7 +571,6 @@ z_index = 1
 texture = ExtResource( 16 )
 
 [node name="remedio" type="Sprite" parent="Cenario/Desk"]
-visible = false
 position = Vector2( -140, -336 )
 scale = Vector2( 0.0711111, 0.0827222 )
 texture = ExtResource( 8 )
@@ -634,6 +633,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 5 )
 
 [node name="Light2D" type="Light2D" parent="Cenario/Lamp"]
+visible = false
 position = Vector2( 10, -99.9999 )
 scale = Vector2( 1.29102, 1.11035 )
 texture = ExtResource( 32 )

@@ -23,6 +23,10 @@ func _ready():
 	GameManager.load_data()
 	print(GameManager.items)
 	for item in get_tree().get_nodes_in_group("items_buttons"):
+
+		
+	
+
 		print(item.get_node(item.name))
 		if item.get_node(item.name) != null:
 			item.get_node(item.name).disabled = false

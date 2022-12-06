@@ -1,13 +1,23 @@
+
+
 [gd_scene load_steps=20 format=2]
+
+
 
 [ext_resource path="res://Cenas/minigame/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/minigame/ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/minigame/bot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/minigame/levelPong.gd" type="Script" id=4]
 [ext_resource path="res://Cenas/main/score.gd" type="Script" id=5]
+
+
 [ext_resource path="res://assets/Font/8-BIT WONDER.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/sounds/smb_1-up.wav" type="AudioStream" id=7]
+
 [ext_resource path="res://assets/MPLACE.png" type="Texture" id=8]
+[ext_resource path="res://assets/Font/Newspaper.ttf" type="DynamicFontData" id=9]
+
+
 
 [sub_resource type="GradientTexture2D" id=1]
 
@@ -138,10 +148,12 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
+
 margin_left = 176.0
 margin_top = 8.0
 margin_right = 216.0
 margin_bottom = 44.0
+
 custom_fonts/font = SubResource( 6 )
 icon = SubResource( 7 )
 flat = true
@@ -179,6 +191,7 @@ text = "Voce Foi Promovido"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 7 )
+
 
 [connection signal="body_entered" from="right" to="." method="_on_right_body_entered"]
 [connection signal="body_entered" from="left" to="." method="_on_left_body_entered"]
