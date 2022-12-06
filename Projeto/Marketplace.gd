@@ -23,10 +23,13 @@ func _ready():
 	GameManager.load_data()
 	print(GameManager.items)
 	for item in get_tree().get_nodes_in_group("items_buttons"):
-
+		print(item.get_node(item.name))
+		if item.get_node(item.name) != null:
+			item.get_node(item.name).disabled = false
+			item.get_node(item.name).text = str(GameManager.items[item.name].price) + " reais"
 		print("item? " + item.name)
 		item.connect("pressed", self,"buy_item",[item])
-
+	$CanvasLayer/Saldo_insuficiente.visible = false
 
 	
 func buy_item(objeto):
@@ -36,7 +39,10 @@ func buy_item(objeto):
 		GameManager.score -= GameManager.items[objeto.name].price
 
 		GameManager.save_data()
-		# e
+	else:
+		$CanvasLayer/Saldo_insuficiente.visible = true
+		yield(get_tree().create_timer(2.0), "timeout")
+		$CanvasLayer/Saldo_insuficiente.visible = false
 		
 func _on_Button_pressed():
 	get_tree().change_scene("res://Cenas/main/monitor.tscn")

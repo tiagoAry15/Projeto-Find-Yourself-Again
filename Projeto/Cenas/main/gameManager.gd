@@ -3,7 +3,7 @@ extends Node
 var firstTime = true
 var score = 0
 var items =  {}
-var file_path = "user://game-data.json"
+var file_path = "user://game-data3.json"
 var days =  0
 var healthbar = 255
 var playerPosition = Vector2(1001,235)
@@ -48,7 +48,11 @@ func object_interact(objectName):
 	if objectName == "Halter":
 		CharacterActions._Workout()
 	if objectName == "Console":
-		CharacterActions._play_game()	
+		CharacterActions._play_game()
+	if objectName == "Remedio":
+		CharacterActions._take_pill()
+	if objectName == "Comida":
+		CharacterActions._eat()
 
 var atividades = {
 	"banco_azul": 6

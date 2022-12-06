@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Marketplace.gd" type="Script" id=1]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Blocks/Piano 2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/ComidasDeTodosOsSabores.png" type="Texture" id=10]
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Mirror 1.png" type="Texture" id=11]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/art1 1.png" type="Texture" id=12]
+[ext_resource path="res://assets/Font/8-BIT WONDER.TTF" type="DynamicFontData" id=13]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.933333, 0.0941176, 0.0941176, 1 )
@@ -60,6 +61,10 @@ font_data = ExtResource( 8 )
 [sub_resource type="DynamicFont" id=16]
 size = 48
 font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=17]
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 13 )
 
 [node name="Marketplace" type="Node2D"]
 script = ExtResource( 1 )
@@ -291,7 +296,7 @@ margin_right = 313.766
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="Espelho" type="TextureButton" parent="Pagina1/Espelho" groups=["items_buttons"]]
+[node name="Mirror2" type="TextureButton" parent="Pagina1/Espelho" groups=["items_buttons"]]
 self_modulate = Color( 0.196078, 0.188235, 0.188235, 1 )
 margin_right = 174.0
 margin_bottom = 184.0
@@ -299,13 +304,13 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 11 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina1/Espelho/Espelho"]
+[node name="ColorRect" type="ColorRect" parent="Pagina1/Espelho/Mirror2"]
 margin_top = 159.0
 margin_right = 174.0
 margin_bottom = 186.0
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina1/Espelho/Espelho/ColorRect"]
+[node name="Label" type="Label" parent="Pagina1/Espelho/Mirror2/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
 margin_left = 7.92999
 margin_top = 4.39008
@@ -315,7 +320,7 @@ text = "Espelho"
 align = 1
 valign = 1
 
-[node name="Espelho" type="Button" parent="Pagina1/Espelho/Espelho"]
+[node name="Mirror2" type="Button" parent="Pagina1/Espelho/Mirror2"]
 margin_left = 112.0
 margin_top = 159.0
 margin_right = 174.0
@@ -530,20 +535,20 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="P" type="TextureButton" parent="Pagina2/Piano"]
+[node name="Piano" type="TextureButton" parent="Pagina2/Piano" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 159.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina2/Piano/P"]
+[node name="ColorRect" type="ColorRect" parent="Pagina2/Piano/Piano"]
 margin_top = 159.0
 margin_right = 174.0
 margin_bottom = 186.0
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina2/Piano/P/ColorRect"]
+[node name="Label" type="Label" parent="Pagina2/Piano/Piano/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
 margin_top = 4.3631
 margin_right = 51.0
@@ -552,7 +557,7 @@ text = "Piano"
 align = 1
 valign = 1
 
-[node name="Button" type="Button" parent="Pagina2/Piano/P"]
+[node name="Button" type="Button" parent="Pagina2/Piano/Piano"]
 margin_left = 112.0
 margin_top = 159.0
 margin_right = 174.0
@@ -572,7 +577,7 @@ margin_right = 84.3571
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="TextureButton" type="TextureButton" parent="Pagina2/Books"]
+[node name="TextureButton" type="TextureButton" parent="Pagina2/Books" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 159.0
 mouse_default_cursor_shape = 2
@@ -614,7 +619,7 @@ margin_right = 313.766
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="TextureButton" type="TextureButton" parent="Pagina2/Mesa e Tv"]
+[node name="TextureButton" type="TextureButton" parent="Pagina2/Mesa e Tv" groups=["items_buttons"]]
 self_modulate = Color( 0.196078, 0.188235, 0.188235, 1 )
 margin_right = 174.0
 margin_bottom = 159.0
@@ -670,6 +675,16 @@ position = Vector2( 512, 301 )
 offset = Vector2( 1024, 0 )
 current = true
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Saldo_insuficiente" type="Label" parent="CanvasLayer"]
+margin_left = 364.0
+margin_top = 71.0
+margin_right = 620.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 17 )
+text = "Saldo Insuficiente"
+
 [connection signal="pressed" from="Pagina1/Halter/Halter" to="." method="_on_Halter_pressed"]
 [connection signal="pressed" from="Pagina1/Halter/Halter/Halter" to="." method="_on_Halter_pressed"]
 [connection signal="pressed" from="Pagina1/Console/Console" to="." method="_on_Console_pressed"]
@@ -678,12 +693,11 @@ current = true
 [connection signal="pressed" from="Pagina1/Quadro/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books" to="." method="_on_Books_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books/Books" to="." method="_on_Books_pressed"]
-[connection signal="pressed" from="Pagina1/Espelho/Espelho" to="." method="_on_Espelho_pressed"]
-[connection signal="pressed" from="Pagina1/Espelho/Espelho/Espelho" to="." method="_on_Espelho_pressed"]
+[connection signal="pressed" from="Pagina1/Espelho/Mirror2" to="." method="_on_Espelho_pressed"]
+[connection signal="pressed" from="Pagina1/Espelho/Mirror2/Mirror2" to="." method="_on_Espelho_pressed"]
 [connection signal="pressed" from="Pagina1/Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Pagina1/Voltar2" to="." method="_on_Voltar2_pressed"]
 [connection signal="pressed" from="Pagina2/Comida/Comida" to="." method="_on_Comida_pressed"]
 [connection signal="pressed" from="Pagina2/Comida/Comida/Comida" to="." method="_on_Comida_pressed"]
 [connection signal="pressed" from="Pagina2/Remedio/Remedio" to="." method="_on_Remedio_pressed"]
-[connection signal="pressed" from="Pagina2/Remedio/Remedio/Remedio" to="." method="_on_Remedio_pressed"]
 [connection signal="pressed" from="Pagina2/VoltarPag1" to="." method="_on_VoltarPag1_pressed"]

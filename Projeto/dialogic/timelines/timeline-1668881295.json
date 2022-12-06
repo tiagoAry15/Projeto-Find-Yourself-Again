@@ -6,7 +6,7 @@
 			"event_id": "dialogic_031",
 			"event_name": "BackgroundMusic",
 			"fade_length": 1,
-			"file": "",
+			"file": "res://assets/sounds/Pokémon XY - BW Emotion theme HD (Official).mp3",
 			"volume": 1
 		},
 		{
