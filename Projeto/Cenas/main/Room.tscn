@@ -448,7 +448,6 @@ texture = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piano/banco_azul/StaticBody2D"]
 position = Vector2( 0.635132, -17.7896 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 21 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -529,7 +528,7 @@ scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 1 )
 flip_h = true
 
-[node name="Remedio" type="Sprite" parent="WallShelving1" groups=["interactive_objects"]]
+[node name="Remedio" type="Sprite" parent="WallShelving1" groups=["interactive_objects", "objects"]]
 position = Vector2( 20, 90 )
 scale = Vector2( 0.0572222, 0.0572222 )
 texture = ExtResource( 8 )
@@ -706,7 +705,7 @@ texture = ExtResource( 13 )
 position = Vector2( -28.8947, 74.1963 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/Door/Area2D"]
-position = Vector2( 30.9453, -16.1981 )
+position = Vector2( 28.3015, -11.0011 )
 rotation = -1.13446
 shape = SubResource( 34 )
 
@@ -732,6 +731,7 @@ modulate = Color( 0, 0, 0, 1 )
 position = Vector2( 1228, 32 )
 rotation = 0.0698132
 scale = Vector2( 1.4, 1.2 )
+z_index = -1
 texture = ExtResource( 21 )
 flip_h = true
 
@@ -741,7 +741,7 @@ rotation = 0.00731059
 scale = Vector2( 1.42557, 1.38882 )
 texture = ExtResource( 36 )
 
-[node name="Comida" type="Sprite" parent="Cenario/mesa_com_comida" groups=["interactive_objects"]]
+[node name="Comida" type="Sprite" parent="Cenario/mesa_com_comida" groups=["interactive_objects", "objects"]]
 position = Vector2( -0.921692, -19.8892 )
 scale = Vector2( 1.28696, 1.38496 )
 texture = SubResource( 38 )
@@ -851,7 +851,7 @@ position = Vector2( 872, 291 )
 scale = Vector2( 3.81744, 4.59492 )
 texture = ExtResource( 15 )
 
-[node name="Halter" type="Sprite" parent="." groups=["interactive_objects"]]
+[node name="Halter" type="Sprite" parent="." groups=["interactive_objects", "objects"]]
 position = Vector2( 433, 155 )
 scale = Vector2( 0.18825, 0.20787 )
 texture = ExtResource( 33 )
@@ -867,7 +867,7 @@ position = Vector2( -101.705, -30.2612 )
 rotation = 1.03498
 shape = SubResource( 35 )
 
-[node name="Console" type="Sprite" parent="." groups=["interactive_objects"]]
+[node name="Console" type="Sprite" parent="." groups=["interactive_objects", "objects"]]
 position = Vector2( 898, 570 )
 scale = Vector2( 0.132653, 0.159163 )
 texture = ExtResource( 35 )
@@ -880,7 +880,6 @@ price = 25.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Console/StaticBody2D"]
 position = Vector2( -18.707, 88.7153 )
 rotation = -0.932006
-scale = Vector2( 1, 1 )
 shape = SubResource( 36 )
 
 [connection signal="area_entered" from="Cenario/SwitchWallOffS/Area2D" to="." method="_on_Area2D_area_entered"]

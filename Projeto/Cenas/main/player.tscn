@@ -1,17 +1,13 @@
-
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://components/player/player.gd" type="Script" id=1]
 [ext_resource path="res://components/player/unicorn_atlas.png" type="Texture" id=2]
 [ext_resource path="res://assets/Font/SnesItalic-1G9Be.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://assets/keyboard.png" type="Texture" id=4]
 [ext_resource path="res://assets/terraria.png" type="Texture" id=5]
-
 [ext_resource path="res://Cenas/interface/shader/blackAndWhite.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/sounds/songToSmile.wav" type="AudioStream" id=7]
-
 [ext_resource path="res://assets/sounds/Meow Sound Effect.mp3" type="AudioStream" id=8]
-
 
 [sub_resource type="AtlasTexture" id=29]
 atlas = ExtResource( 2 )
@@ -218,7 +214,6 @@ shape = SubResource( 28 )
 position = Vector2( 2.30769, -140 )
 texture = SubResource( 33 )
 
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Control" parent="UI" instance=ExtResource( 6 )]
@@ -226,6 +221,7 @@ texture = SubResource( 33 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
-
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
 
 [connection signal="working" from="." to="." method="_on_KinematicBody2D_working"]

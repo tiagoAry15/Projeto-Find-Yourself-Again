@@ -24,6 +24,7 @@ visible = false
 [node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Piano" parent="CanvasLayer2" instance=ExtResource( 7 )]
 margin_left = 128.0
