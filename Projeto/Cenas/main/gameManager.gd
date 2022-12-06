@@ -45,4 +45,10 @@ func object_interact(objectName):
 	if objectName == "Door":
 		CharacterActions._End_Game()	
 	
-		
+
+var atividades = {
+	"banco_azul": 6
+}
+var animacoes = {
+	"banco_azul": "animacao"
+}

@@ -102,6 +102,9 @@ config/name="Projeto"
 run/main_scene="res://Cenas/main/Menu.tscn"
 boot_splash/use_filter=false
 config/icon="res://icon.png"
+"<<<<<<<Updatedupstream[autoload]GameManager"="*res://Cenas/main/gameManager.gd"
+CharacterActions="*res://CharacterActions.gd"
+CharacterMood="*res://assets/characterMood/CharacterMood.gd"
 
 [autoload]
 

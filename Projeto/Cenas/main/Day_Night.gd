@@ -7,8 +7,10 @@ func _ready():
 
 func _process(delta):
 	var time = OS.get_time()
+
 	var minuter = time.minute % 4
-	var CurrentFrame = range_lerp(minuter ,0,4,0,24)
+	var CurrentFrame = range_lerp(minuter,0,4,0,24)
+
 	$AnimationPlayer.play("Animation_Day_Night")
 	$AnimationPlayer.seek(CurrentFrame)
 	yield($AnimationPlayer, "animation_finished")

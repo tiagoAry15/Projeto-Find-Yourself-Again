@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=66 format=2]
 
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/wall shelving 1.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/window_curtain_peach_a.png" type="Texture" id=2]
@@ -7,14 +7,14 @@
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Lamp.png" type="Texture" id=5]
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/bed 1.png" type="Texture" id=6]
 [ext_resource path="res://wall.tres" type="TileSet" id=7]
-[ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/Large Candle 1.png" type="Texture" id=8]
+[ext_resource path="res://assets/Remedios.png" type="Texture" id=8]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/Moon 1.png" type="Texture" id=9]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/tv_a.png" type="Texture" id=10]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Furniture/table_round_blue.png" type="Texture" id=11]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/art1 1.png" type="Texture" id=12]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/Detailed Door 4.png" type="Texture" id=13]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Blocks/Wood Table 1.png" type="Texture" id=14]
-[ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/art7 5.png" type="Texture" id=15]
+[ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/art1 5.png" type="Texture" id=15]
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Desk 1.png" type="Texture" id=16]
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Books.png" type="Texture" id=17]
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Closet 2.png" type="Texture" id=18]
@@ -33,6 +33,7 @@
 [ext_resource path="res://item.gd" type="Script" id=31]
 [ext_resource path="res://assets/light.png" type="Texture" id=32]
 [ext_resource path="res://assets/Dumbell.png" type="Texture" id=33]
+[ext_resource path="res://assets/Consolo.png" type="Texture" id=35]
 
 [sub_resource type="Animation" id=22]
 resource_name = "CEU"
@@ -271,6 +272,10 @@ tracks/4/keys = {
 "values": [ Color( 0.870588, 0.741176, 0.490196, 1 ) ]
 }
 
+[sub_resource type="CapsuleShape2D" id=35]
+radius = 228.42
+height = 468.904
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 30 )
 
@@ -369,11 +374,11 @@ texture = ExtResource( 10 )
 z_index = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WoodTable1/Static"]
-position = Vector2( 4.60907, -65.6054 )
+position = Vector2( 2.56067, -9.97204 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="WoodTable1/Static"]
-position = Vector2( 1.53638, -48.8105 )
+position = Vector2( 3.09944e-06, -2.09938 )
 shape = SubResource( 18 )
 
 [node name="banco_azul" type="Sprite" parent="." groups=["interactive_objects", "objects"]]
@@ -388,7 +393,6 @@ price = 5.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="banco_azul/StaticBody2D"]
 position = Vector2( 0.635132, -17.7896 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 21 )
 
 [node name="Piano3" type="Sprite" parent="." groups=["interactive_objects"]]
@@ -400,7 +404,7 @@ script = ExtResource( 31 )
 [node name="static" type="StaticBody2D" parent="Piano3"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Piano3/static"]
-position = Vector2( 1.5, -42.5 )
+position = Vector2( 2.5, 13 )
 scale = Vector2( 0.97633, 0.952665 )
 shape = SubResource( 1 )
 
@@ -408,7 +412,7 @@ shape = SubResource( 1 )
 shape = SubResource( 19 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Piano3/static"]
-position = Vector2( -3.5, -49.5 )
+position = Vector2( -6.5, -6.5 )
 shape = SubResource( 20 )
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -474,6 +478,32 @@ shape = SubResource( 3 )
 position = Vector2( 1113, 555 )
 shape = SubResource( 2 )
 
+[node name="Mirror2" type="Sprite" parent="." groups=["interactive_objects"]]
+position = Vector2( 77, 209 )
+rotation = -0.0523599
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 20 )
+flip_h = true
+script = ExtResource( 31 )
+
+[node name="WallShelving1" type="Sprite" parent="."]
+position = Vector2( 583, -88 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="Books" type="Sprite" parent="." groups=["interactive_objects"]]
+position = Vector2( 633, -169 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 17 )
+flip_h = true
+script = ExtResource( 31 )
+
+[node name="Quadro" type="Sprite" parent="."]
+position = Vector2( 1024, -233 )
+texture = ExtResource( 12 )
+flip_h = true
+
 [node name="Cenario" type="Node" parent="."]
 
 [node name="BlueTowel4" type="Sprite" parent="Cenario"]
@@ -481,22 +511,18 @@ position = Vector2( 330, 64 )
 rotation = -0.0523599
 texture = ExtResource( 23 )
 
-[node name="Mirror2" type="Sprite" parent="Cenario"]
-position = Vector2( 77, 209 )
-rotation = -0.0523599
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 20 )
-flip_h = true
-
 [node name="Desk" type="Sprite" parent="Cenario"]
 position = Vector2( 1663, 279 )
 scale = Vector2( 0.25, 0.25 )
 z_index = 1
 texture = ExtResource( 16 )
 
-[node name="LargeCandle1" type="Sprite" parent="Cenario/Desk"]
-position = Vector2( -130, -326.667 )
+[node name="remedio" type="Sprite" parent="Cenario/Desk"]
+visible = false
+position = Vector2( -140, -336 )
+scale = Vector2( 0.0711111, 0.0827222 )
 texture = ExtResource( 8 )
+flip_h = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Cenario/Desk"]
 
@@ -584,19 +610,6 @@ position = Vector2( 46.6665, 36.6666 )
 rotation = 0.575959
 shape = SubResource( 9 )
 
-[node name="WallShelving1" type="Sprite" parent="Cenario"]
-position = Vector2( 583, -88 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 1 )
-flip_h = true
-
-[node name="Books" type="Sprite" parent="Cenario"]
-visible = false
-position = Vector2( 633, -169 )
-scale = Vector2( 0.1, 0.1 )
-texture = ExtResource( 17 )
-flip_h = true
-
 [node name="Closet2" type="Sprite" parent="Cenario"]
 position = Vector2( 196, 176 )
 scale = Vector2( 0.3, 0.3 )
@@ -626,7 +639,7 @@ rotation = 0.0698132
 scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 2 )
 
-[node name="Art11" type="Sprite" parent="Cenario"]
+[node name="Quadro" type="Sprite" parent="Cenario"]
 position = Vector2( 1024, -233 )
 texture = ExtResource( 12 )
 flip_h = true
@@ -742,15 +755,29 @@ shape = SubResource( 2 )
 
 [node name="tapete" type="Sprite" parent="." groups=["interactive_objects"]]
 modulate = Color( 0, 0, 0, 1 )
-position = Vector2( 972, 338 )
-scale = Vector2( 5, 6 )
+position = Vector2( 872, 291 )
+scale = Vector2( 3.81744, 4.59492 )
 texture = ExtResource( 15 )
 script = ExtResource( 31 )
 
 [node name="Halter" type="Sprite" parent="." groups=["interactive_objects"]]
-position = Vector2( 1359.44, 150.375 )
-scale = Vector2( 0.141125, 0.154861 )
+position = Vector2( 433, 155 )
+scale = Vector2( 0.18825, 0.20787 )
 texture = ExtResource( 33 )
+script = ExtResource( 31 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Halter"]
+position = Vector2( 53.1208, -33.6749 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Halter/StaticBody2D"]
+position = Vector2( -101.705, -30.2612 )
+rotation = 1.03498
+shape = SubResource( 35 )
+
+[node name="Console" type="Sprite" parent="." groups=["interactive_objects"]]
+position = Vector2( 898, 570 )
+scale = Vector2( 0.132653, 0.159163 )
+texture = ExtResource( 35 )
 flip_h = true
 script = ExtResource( 31 )
 
