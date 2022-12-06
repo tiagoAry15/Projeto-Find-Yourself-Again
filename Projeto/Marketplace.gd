@@ -33,23 +33,15 @@ func _on_back_pressed():
 	$monitor/Menu/buy2.hide()
 
 
-func _on_monitor_blue_comprado():
-	$TableRoundBlue.show()
-	pass # Replace with function body.
-
-
-func _on_monitor_tapete_comprado():
-	$Cenario/Art75.show()
-	pass # Replace with function body.
-
-func _on_Halter_pressed():
-	$Cenario/Halter.show()
-
-
-func _on_P_pressed():
-	$Cenario/Piano3.show()
-
-
+	for item in get_tree().get_nodes_in_group("items_buttons"):
+		
+		if GameManager.items[item.name].comprado == false:
+		
+			get_node("Menu/" + item.name).show()
+		else:
+			get_node("Menu/" + item.name).hide()
+	$back.show()
 func _on_Button_pressed():
+	
 	get_tree().change_scene("res://Cenas/main/monitor.tscn")
 	pass # Replace with function body.

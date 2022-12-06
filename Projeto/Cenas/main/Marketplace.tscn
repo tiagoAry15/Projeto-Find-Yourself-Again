@@ -106,7 +106,7 @@ margin_right = 313.766
 margin_bottom = -36.6195
 size_flags_stretch_ratio = 0.0
 
-[node name="TextureButton" type="TextureButton" parent="Sprite/Planta"]
+[node name="TextureButton" type="TextureButton" parent="Sprite/Planta" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 159.0
 mouse_default_cursor_shape = 2
@@ -144,7 +144,7 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="P" type="TextureButton" parent="Sprite/Piano"]
+[node name="P" type="TextureButton" parent="Sprite/Piano" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 159.0
 mouse_default_cursor_shape = 2
@@ -259,5 +259,4 @@ margin_right = -258.593
 margin_bottom = -213.768
 text = "voltar"
 
-[connection signal="pressed" from="Sprite/Piano/P" to="." method="_on_P_pressed"]
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]

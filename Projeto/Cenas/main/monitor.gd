@@ -9,7 +9,7 @@ extends Sprite
 func _ready():
 	for button in get_tree().get_nodes_in_group("items_buttons"):
 		button.connect("pressed", self, "buy_item",[button.name])
-	$Menu/AnimationPlayer.play("transition")
+
 	pass # Replace with function body.
 
 

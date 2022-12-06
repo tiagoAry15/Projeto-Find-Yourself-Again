@@ -116,13 +116,6 @@ margin_right = -668.371
 margin_bottom = 414.043
 flat = true
 
-[node name="Button_News2" type="Button" parent="."]
-margin_left = -830.371
-margin_top = 287.043
-margin_right = -668.371
-margin_bottom = 414.043
-flat = true
-
 [node name="Button_turnOff" type="Button" parent="."]
 margin_left = 764.618
 margin_top = -470.033
@@ -133,6 +126,7 @@ icon = ExtResource( 2 )
 flat = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource( 2 )
 margin_left = -960.0
 margin_top = -535.0
@@ -143,6 +137,12 @@ color = Color( 1, 1, 1, 0 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/transition = SubResource( 3 )
 
+[node name="market_place" type="Button" parent="."]
+margin_left = -813.463
+margin_top = 64.5847
+margin_right = -663.463
+margin_bottom = 193.585
+flat = true
+
 [connection signal="pressed" from="Button_Game" to="." method="_on_Button_Game_pressed"]
 [connection signal="pressed" from="Button_Work" to="." method="_on_Button_Work_pressed"]
-[connection signal="pressed" from="Button_turnOff" to="." method="_on_Button_turnOff_pressed"]
