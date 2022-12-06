@@ -162,11 +162,9 @@ margin_right = 314.011
 margin_bottom = -36.584
 size_flags_stretch_ratio = 0.0
 
-<<<<<<< HEAD
-[node name="Quadro" type="TextureButton" parent="Pagina1/Quadro"]
-=======
+
 [node name="Quadro" type="TextureButton" parent="Pagina1/Quadro" groups=["items_buttons"]]
->>>>>>> 283d65a294b7fa05e6d53775a672408cd7a97f2b
+
 margin_left = 30.0
 margin_top = -5.0
 margin_right = 147.0
@@ -211,11 +209,9 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-<<<<<<< HEAD
-[node name="Piano3" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
-=======
+
 [node name="P" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
->>>>>>> 283d65a294b7fa05e6d53775a672408cd7a97f2b
+
 margin_right = 174.0
 margin_bottom = 186.0
 mouse_default_cursor_shape = 2
