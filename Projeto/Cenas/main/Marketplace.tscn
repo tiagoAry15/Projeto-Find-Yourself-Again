@@ -252,5 +252,12 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/normal = SubResource( 1 )
 text = "100 Reais"
 
-[connection signal="pressed" from="Sprite/Halter/Halter" to="." method="_on_Halter_pressed"]
+[node name="Button" type="Button" parent="Sprite"]
+margin_left = -304.593
+margin_top = -250.768
+margin_right = -258.593
+margin_bottom = -213.768
+text = "voltar"
+
 [connection signal="pressed" from="Sprite/Piano/P" to="." method="_on_P_pressed"]
+[connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]

@@ -10,7 +10,7 @@ extends Node2D
 func _ready():
 
 	set_items()
-	$CanvasLayer/ColorRect.color = Color(0,0,0,0)
+	$CanvasLayer/AnimationPlayer.play("TransitionAnimation")
 	$CanvasLayer/HBoxContainer.rect_position = Vector2(946,7)
 	$KinematicBody2D.position = GameManager.playerPosition
 	$CanvasLayer.connect("updating_day", self,"_on_day_updated")	
@@ -44,7 +44,6 @@ func set_items():
 		if GameManager.items[item.name].comprado == false:
 			print("escondido")
 			item.hide()
-			
 		else:
 			item.show()
 			

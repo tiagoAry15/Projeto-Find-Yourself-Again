@@ -55,7 +55,7 @@
 			"text": "Saiba que você não precisar lutar sozinho, busque alguém que possa ouvir, conversar, te divertir e te consolar.\nPois ao encontrar uma mão ou até mesmo uma patinha amiga, ela te ajudará encontrar a si mesmo, com um novo ar para a sua vida"
 		},
 		{
-			"emit_signal": "",
+			"emit_signal": "end",
 			"event_id": "dialogic_040"
 		}
 	],

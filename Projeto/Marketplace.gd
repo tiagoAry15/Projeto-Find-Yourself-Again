@@ -48,3 +48,8 @@ func _on_Halter_pressed():
 
 func _on_P_pressed():
 	$Cenario/Piano3.show()
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://Cenas/main/monitor.tscn")
+	pass # Replace with function body.

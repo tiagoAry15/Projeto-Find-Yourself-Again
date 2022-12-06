@@ -1,7 +1,33 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://assets/Font/SnesItalic-1G9Be.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Cenas/main/TransitionScreen.gd" type="Script" id=2]
+[ext_resource path="res://Cenas/TransitionAnimation.tres" type="Animation" id=3]
+[ext_resource path="res://assets/curtain.png" type="Texture" id=4]
+
+[sub_resource type="Shader" id=8]
+code = "shader_type canvas_item;
+render_mode unshaded;
+
+uniform float cutoff : hint_range(0.0, 1.0);
+uniform float smooth_size : hint_range(0.0, 1.0);
+uniform sampler2D mask : hint_albedo;
+
+uniform vec4 color : hint_color;
+
+void fragment()
+{
+	float value = texture(mask, UV).r;
+	float alpha = smoothstep(cutoff, cutoff + smooth_size, value * (1.0 - smooth_size) + smooth_size);
+	COLOR = vec4(color.rgb, alpha);
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 8 )
+shader_param/cutoff = 0.0
+shader_param/smooth_size = 0.064
+shader_param/color = null
+shader_param/mask = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -25,41 +51,41 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 448, 247 ) ]
 }
-
-[sub_resource type="Animation" id=4]
-resource_name = "sleep"
-length = 5.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("ColorRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 1, 3, 4 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
-}
 tracks/1/type = "value"
-tracks/1/path = NodePath("HBoxContainer:rect_position")
+tracks/1/path = NodePath("ColorRect:material")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ SubResource( 6 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "sleep"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
 "times": PoolRealArray( 0, 1, 2, 4 ),
 "transitions": PoolRealArray( 1, 0.125, 5.09824, 1 ),
 "update": 0,
 "values": [ Vector2( 946, 7 ), Vector2( 946, 7 ), Vector2( 512, 300 ), Vector2( 946, 7 ) ]
 }
-tracks/2/type = "method"
-tracks/2/path = NodePath(".")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 1.6 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
@@ -68,24 +94,39 @@ tracks/2/keys = {
 } ]
 }
 
+[sub_resource type="Animation" id=7]
+resource_name = "teste"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("ColorRect:material:shader_param/cutoff")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+material = SubResource( 6 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -2.0
 margin_top = -5.0
 margin_right = 1.0
 margin_bottom = -5.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0, 0, 0, 0 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = 448.0
+margin_left = -576.0
 margin_top = 247.0
-margin_right = 513.0
+margin_right = -511.0
 margin_bottom = 310.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -118,4 +159,6 @@ align = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 3 )
+anims/TransitionAnimation = ExtResource( 3 )
 anims/sleep = SubResource( 4 )
+anims/teste = SubResource( 7 )

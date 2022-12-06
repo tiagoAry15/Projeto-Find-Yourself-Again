@@ -194,7 +194,6 @@ custom_fonts/font = SubResource( 32 )
 text = "255
 "
 align = 1
-percent_visible = -0.333333
 
 [node name="InteractionButton" type="Sprite" parent="."]
 visible = false
