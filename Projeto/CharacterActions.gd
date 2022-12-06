@@ -1,7 +1,8 @@
 extends Node
 
 signal sleep
-
+signal pill
+signal eat_food
 func _Sleep():
 	emit_signal("sleep")
 	
@@ -17,3 +18,9 @@ func _Workout():
 
 func _play_game():
 	print("jogar")
+
+func _take_pill():
+	emit_signal("pill")
+
+func _eat():
+	emit_signal("eat_food")

@@ -46,7 +46,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 384, 40 ), Vector2( 384, 24 ) ]
+"values": [ Vector2( 384, 100 ), Vector2( 384, 70 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Promotion:visible")
@@ -138,10 +138,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 16.0
-margin_right = 1012.0
-margin_bottom = 52.0
+margin_left = 176.0
+margin_top = 8.0
+margin_right = 216.0
+margin_bottom = 44.0
 custom_fonts/font = SubResource( 6 )
 icon = SubResource( 7 )
 flat = true
@@ -158,10 +158,10 @@ text = "COIN:"
 script = ExtResource( 5 )
 
 [node name="Boost" type="Label" parent="."]
-margin_left = 102.0
-margin_top = 63.0
-margin_right = 126.0
-margin_bottom = 80.0
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 216.0
+margin_bottom = 81.0
 custom_fonts/font = SubResource( 12 )
 text = "1x"
 
@@ -170,14 +170,15 @@ anims/promotion! = SubResource( 9 )
 
 [node name="Promotion" type="Label" parent="."]
 anchor_bottom = 0.012
-margin_left = 380.0
-margin_top = 71.0
-margin_right = 644.0
-margin_bottom = 79.8
+margin_left = 384.0
+margin_top = 100.0
+margin_right = 648.0
+margin_bottom = 108.8
 custom_fonts/font = SubResource( 10 )
 text = "Voce Foi Promovido"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
 
 [connection signal="body_entered" from="right" to="." method="_on_right_body_entered"]
 [connection signal="body_entered" from="left" to="." method="_on_left_body_entered"]

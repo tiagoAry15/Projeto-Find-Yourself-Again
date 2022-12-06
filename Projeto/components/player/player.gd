@@ -17,6 +17,7 @@ var object = null
 var rng = RandomNumberGenerator.new()
 var isWorking = false
 var doingSomething = false
+var imune = false
 var sprite_movement = {
 	"walk_up":"idle_up",
 	"walk_down":"idle_down",
@@ -38,6 +39,7 @@ func _ready():
 	timer.set_one_shot(false) # Make sure it loops
 	timer.start()
 	self.connect("interact",GameManager,"object_interact")
+	
 	randomNumber = rng.randi_range(10,15)
 	randomNumber2 = rng.randi_range(15,45)
 
@@ -51,6 +53,11 @@ func _input(event):
 
 func _physics_process(delta):
 	#$AnimatedSprite.modulate = Color(healthbar,healthbar,healthbar)
+	
+	if imune:
+		yield(get_tree().create_timer(20.0), "timeout")
+		imune = false
+		
 	if last_mouse_pos:
 		var direction_vector = (last_mouse_pos - global_position)
 		
@@ -108,7 +115,7 @@ func on_show_emotion(emotion):
 	$Emotion.hide()
 	 
 func _on_Timer_timeout():
-	if not isWorking and not doingSomething:
+	if not isWorking and not doingSomething and not imune:
 		update_health(-2)
 		
 	if randomNumber == 0:
