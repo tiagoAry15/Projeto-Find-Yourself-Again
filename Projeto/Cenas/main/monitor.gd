@@ -26,6 +26,7 @@ func buy_item(item):
 
 
 func _on_Button_Shop_pressed():
+	print("clicado")
 	get_tree().change_scene("res://Cenas/main/Marketplace.tscn")
 
 func _on_Button_Work_pressed():

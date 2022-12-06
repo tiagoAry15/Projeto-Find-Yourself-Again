@@ -127,6 +127,7 @@ func _on_Timer_timeout():
 	if randomNumber2 == 0:
 		$AudioStreamPlayer2D.play()
 		randomNumber2 = rng.randi_range(15,45)
+		$AudioStreamPlayer2D.stop()
 	else:
 		randomNumber2 -= 1
 		 

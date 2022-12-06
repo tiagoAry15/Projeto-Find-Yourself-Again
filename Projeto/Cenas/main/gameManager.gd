@@ -44,8 +44,11 @@ func object_interact(objectName):
 	if objectName == "cadeira_desk":
 		CharacterActions._Work()	
 	if objectName == "Door":
-		CharacterActions._End_Game()	
-	
+		CharacterActions._End_Game()
+	if objectName == "Halter":
+		CharacterActions._Workout()
+	if objectName == "Console":
+		CharacterActions._play_game()	
 
 var atividades = {
 	"banco_azul": 6
@@ -53,3 +56,5 @@ var atividades = {
 var animacoes = {
 	"banco_azul": "animacao"
 }
+
+
