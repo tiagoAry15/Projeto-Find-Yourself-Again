@@ -3,7 +3,7 @@ extends CanvasModulate
 signal update_day
 signal is_night
 var onetime = true
-var	CurrentFrame = 3
+var	CurrentFrame = 2
 
 
 func _process(delta):

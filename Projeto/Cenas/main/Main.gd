@@ -51,5 +51,7 @@ func set_items():
 			
 func _on_day_updated():
 	GameManager.days += 1
+	if GameManager.days == 2:
+		$Room/Cenario/Door/Area2D/CollisionShape2D.disabled = false 
 	
 

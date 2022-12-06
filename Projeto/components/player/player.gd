@@ -42,7 +42,7 @@ func _ready():
 	self.connect("interact",GameManager,"object_interact")
 	
 	randomNumber = rng.randi_range(10,15)
-	randomNumber2 = rng.randi_range(15,45)
+	randomNumber2 = rng.randi_range(1,5)
 
 func _input(event):
 	if event.is_action_pressed("game_move") :
@@ -133,12 +133,16 @@ func _on_Timer_timeout():
 		randomNumber -= 1
 	
 	if randomNumber2 == 0:
-		$AudioStreamPlayer2D.play()
-		randomNumber2 = rng.randi_range(15,45)
-		$AudioStreamPlayer2D.stop()
+		
+		$AudioStreamPlayer2.play()
+		
+		randomNumber2 = rng.randi_range(5,45)
+		
+		print(randomNumber2)
+		
 	else:
 		randomNumber2 -= 1
-		 
+		$AudioStreamPlayer2.stop()
 
 func is_sleepy():
 	on_show_emotion("Sleepy")	
