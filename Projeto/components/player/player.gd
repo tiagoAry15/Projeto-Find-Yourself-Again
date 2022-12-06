@@ -7,6 +7,7 @@ signal interact
 
 var imagem = load("res://assets/terraria.png")
 var randomNumber = 0
+var randomNumber2 = 0
 var textura;
 var speed = Vector2(4, 2)
 var last_mouse_pos = null
@@ -38,9 +39,7 @@ func _ready():
 	timer.start()
 	self.connect("interact",GameManager,"object_interact")
 	randomNumber = rng.randi_range(10,15)
-	
-func catersian_to_isometric(cartesian):
-	return Vector2(cartesian.x - cartesian.y, (cartesian.x + cartesian.y)/2)
+	randomNumber2 = rng.randi_range(15,45)
 
 func _input(event):
 	if event.is_action_pressed("game_move") :
@@ -124,7 +123,16 @@ func _on_Timer_timeout():
 		randomNumber = rng.randi_range(10,15)
 	else:
 		randomNumber -= 1
+	
+	if randomNumber2 == 0:
+		$AudioStreamPlayer2D.play()
+		randomNumber2 = rng.randi_range(15,45)
+	else:
+		randomNumber2 -= 1
 		 
+
+func is_sleepy():
+	on_show_emotion("Sleepy")	
 
 func update_health(value):
 	GameManager.healthbar += value

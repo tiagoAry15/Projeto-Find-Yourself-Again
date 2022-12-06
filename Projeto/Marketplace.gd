@@ -1,6 +1,11 @@
 extends Node2D
 
 signal is_working
+
+
+
+	
+
 func _process(delta):
 	$Pagina1/Score.text = "Saldo: " + str(GameManager.score)
 	$Pagina2/Score.text = "Saldo: " + str(GameManager.score)
@@ -17,10 +22,11 @@ func _on_back_pressed():
 
 
 func _ready():
+	GameManager.load_data()
 	for item in get_tree().get_nodes_in_group("items_buttons"):
 		item.connect("pressed", self,"buy_item")
 		
-	$back.show()
+	$Pagina1/Voltar.show()
 	
 	
 func buy_item(objeto):

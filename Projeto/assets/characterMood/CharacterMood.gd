@@ -5,7 +5,8 @@ var Character_Emotions = {
 	"VeryHappy": Rect2(84,12,48,48),
 	"Normal": Rect2(0,0,48,48),
 	"Sad": Rect2(228,300,48,48),
-	"VerySad": Rect2(1020,300,48,48)
+	"VerySad": Rect2(1020,300,48,48),
+	"Sleepy": Rect2(1020,155,49,49)
 }
 func _ready():
 	pass # Replace with function body.
