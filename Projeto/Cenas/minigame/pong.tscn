@@ -5,9 +5,12 @@
 [ext_resource path="res://Cenas/minigame/bot.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/minigame/levelPong.gd" type="Script" id=4]
 [ext_resource path="res://Cenas/main/score.gd" type="Script" id=5]
+
 [ext_resource path="res://assets/Font/8-BIT WONDER.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/sounds/smb_1-up.wav" type="AudioStream" id=7]
-[ext_resource path="res://assets/MPLACE.png" type="Texture" id=8]
+[ext_resource path="res://assets/MPLACE.png" type="Texture" id=6]
+[ext_resource path="res://assets/Font/Newspaper.ttf" type="DynamicFontData" id=7]
+
 
 [sub_resource type="GradientTexture2D" id=1]
 
@@ -138,10 +141,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 180.0
-margin_top = 11.0
-margin_right = 215.0
-margin_bottom = 42.0
+margin_left = 896.0
+margin_top = 16.0
+margin_right = 1012.0
+margin_bottom = 52.0
 custom_fonts/font = SubResource( 6 )
 icon = SubResource( 7 )
 flat = true

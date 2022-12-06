@@ -3,9 +3,8 @@ extends CanvasModulate
 signal update_day
 signal is_night
 var onetime = true
-var	CurrentFrame = 0
-func _ready():
-	$AnimationPlayer.seek(5)
+var	CurrentFrame = 3
+
 
 func _process(delta):
 

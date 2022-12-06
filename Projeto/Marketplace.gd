@@ -2,8 +2,6 @@ extends Node2D
 
 signal is_working
 
-
-
 	
 
 func _process(delta):
@@ -23,24 +21,30 @@ func _on_back_pressed():
 
 func _ready():
 	GameManager.load_data()
+	print(GameManager.items)
 	for item in get_tree().get_nodes_in_group("items_buttons"):
+
+		print("item? " + item.name)
 		item.connect("pressed", self,"buy_item",[item])
 
-	
+
 	
 func buy_item(objeto):
 	print(GameManager.items)
 	if GameManager.score >= GameManager.items[objeto.name].price:
 		GameManager.items[objeto.name].comprado = true
 		GameManager.score -= GameManager.items[objeto.name].price
-		print(GameManager.items[objeto.name].name)
+
+		GameManager.save_data()
+		# e
 		
 func _on_Button_pressed():
 	get_tree().change_scene("res://Cenas/main/monitor.tscn")
 	pass # Replace with function body.
 
+
 func _on_Voltar2_pressed():
-	$Camera2D.offset(Vector2(1540 , 301))
+	$Camera2D.offset = Vector2(1024 , 0)
 
 
 func _on_Voltar_pressed():
@@ -48,5 +52,5 @@ func _on_Voltar_pressed():
 
 
 func _on_VoltarPag1_pressed():
-	$Camera2D.offset(Vector2(512 , 301))
+	$Camera2D.offset = Vector2(0 , 0)
 

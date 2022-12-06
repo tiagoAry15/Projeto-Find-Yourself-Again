@@ -1,6 +1,15 @@
 {
 	"events": [
 		{
+			"audio_bus": "Master",
+			"background-music": "play",
+			"event_id": "dialogic_031",
+			"event_name": "BackgroundMusic",
+			"fade_length": 1,
+			"file": "",
+			"volume": 1
+		},
+		{
 			"animation": "2-fade_in_up.gd",
 			"animation_length": 1,
 			"change_mirror_portrait": false,
@@ -21,10 +30,28 @@
 			"z_index": 0
 		},
 		{
-			"character": "",
+			"character": "character-1668878199.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
-			"text": "Seja bem vindo ao Find Yourself Again"
+			"text": "Seja bem vindo ao Find Yourself Again. Uma experiência em buscar por si mesmo"
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Diante de uma epidemia que assola sua cidade natal, nosso protagonista se vê obrigado a permanecer em casa para garantir sua saúde, cuidando de sua residência enquanto permanece em seu trabalho remoto"
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Entretanto, ele acabou perdendo algo muito importante em sua vida dentro de casa : ele mesmo."
+		},
+		{
+			"character": "character-1668878199.json",
+			"event_id": "dialogic_001",
+			"portrait": "",
+			"text": "Distante da família e dos amigos, nosso protagonista buscará meios de enfrentar seus males, buscando a si mesmo dentro de sua casa."
 		},
 		{
 			"character": "character-1668878199.json",

@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/wall shelving 1.png" type="Texture" id=1]
 [ext_resource path="res://assets/assets_cenario/Isometric Interiors Pack - V1/Props/window_curtain_peach_a.png" type="Texture" id=2]
@@ -275,6 +275,10 @@ tracks/4/keys = {
 [sub_resource type="CapsuleShape2D" id=35]
 radius = 228.42
 height = 468.904
+
+[sub_resource type="CapsuleShape2D" id=36]
+radius = 331.129
+height = 238.403
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 30 )
@@ -788,5 +792,13 @@ texture = ExtResource( 35 )
 flip_h = true
 script = ExtResource( 31 )
 price = 25.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Console"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Console/StaticBody2D"]
+position = Vector2( -18.707, 88.7153 )
+rotation = -0.932006
+scale = Vector2( 1, 1 )
+shape = SubResource( 36 )
 
 [connection signal="area_entered" from="Cenario/SwitchWallOffS/Area2D" to="." method="_on_Area2D_area_entered"]

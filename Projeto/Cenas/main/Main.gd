@@ -7,6 +7,7 @@ extends Node2D
 
 func _ready():
 	set_items()	
+	
 	$CanvasLayer/AnimationPlayer.play("TransitionAnimation")
 	$CanvasLayer/HBoxContainer.rect_position = Vector2(946,7)
 	$KinematicBody2D.position = GameManager.playerPosition
@@ -35,7 +36,6 @@ func set_items():
 
 		print("itens adicionados")
 
-		GameManager.firstTime = false
 
 		GameManager.save_data()
 		
@@ -44,7 +44,7 @@ func set_items():
 		#GameManager.load_data()
 	for item in get_node("Room").get_tree().get_nodes_in_group("interactive_objects"):
 		if GameManager.items[item.name].comprado == false:
-			print("escondido")
+		
 			item.hide()
 		else:
 			item.show()

@@ -119,9 +119,9 @@ color = Color( 0, 0, 0, 0 )
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -576.0
+margin_left = 448.0
 margin_top = 247.0
-margin_right = -511.0
+margin_right = 513.0
 margin_bottom = 310.0
 grow_horizontal = 2
 grow_vertical = 0

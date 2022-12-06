@@ -7,7 +7,7 @@ func _ready():
 	for item in get_tree().get_nodes_in_group("objects"):
 		if len(item.get_children()) != 0:
 			print(item.get_children()[0])
-	
+	$Cenario/Door/Area2D/CollisionShape2D.disabled = true
 	$CanvasModulate.connect("update_day",self,"_on_day_updated")
 	
 	
@@ -32,5 +32,7 @@ func _on_back_pressed():
 	$monitor/Menu/buy1.hide()
 	$monitor/Menu/buy2.hide()
 
-
+func _on_day_updated():
+	if GameManager.days == 2:
+		$Cenario/Door/Area2D/CollisionShape2D.disabled = false
 
