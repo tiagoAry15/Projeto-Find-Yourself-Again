@@ -13,17 +13,13 @@ script = ExtResource( 5 )
 [node name="Room" parent="." instance=ExtResource( 2 )]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1001, 235 )
-z_index = 2
+position = Vector2( 1114, 92 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 3 )]
 
 [node name="monitor" parent="." instance=ExtResource( 4 )]
 visible = false
-<<<<<<< Updated upstream
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 6 )]
 
 [connection signal="update_health" from="KinematicBody2D" to="." method="_on_KinematicBody2D_update_health"]
-=======
->>>>>>> Stashed changes

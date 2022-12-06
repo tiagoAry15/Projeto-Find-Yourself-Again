@@ -9,6 +9,7 @@ extends Sprite
 func _ready():
 	for button in get_tree().get_nodes_in_group("items_buttons"):
 		button.connect("pressed", self, "buy_item",[button.name])
+
 	pass # Replace with function body.
 
 
@@ -36,7 +37,6 @@ func _on_back_pressed():
 func _on_exit_pressed():
 	get_tree().change_scene("res://Cenas/main/Main.tscn")
 	pass # Replace with function body.
-
 
 func _on_Button_Game_pressed():
 	get_tree().change_scene("res://Cenas/minigame/pong.tscn")

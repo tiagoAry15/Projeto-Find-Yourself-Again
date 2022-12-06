@@ -16,6 +16,24 @@ func _on_back_pressed():
 	get_tree().change_scene("res://Cenas/main/monitor.tscn")
 
 
+func _ready():
+	for item in get_tree().get_nodes_in_group("items_buttons"):
+		item.connect("pressed", self,"buy_item")
+		
+	$back.show()
+	
+	
+func buy_item(objeto):
+	if GameManager.score >= GameManager.items[objeto.name].price:
+		GameManager.items[objeto.name].comprado = true
+		GameManager.score -= GameManager.items[objeto.name].price
+		# esgotado
+		
+func _on_Button_pressed():
+	
+	get_tree().change_scene("res://Cenas/main/monitor.tscn")
+	pass # Replace with function body.
+
 func _on_Halter_pressed():
 	if GameManager.itens_comprados["Halter"] == false:
 		if GameManager.score >= 10:
@@ -79,3 +97,4 @@ func _on_Voltar_pressed():
 
 func _on_VoltarPag1_pressed():
 	$Camera2D.offset(Vector2(512 , 301))
+

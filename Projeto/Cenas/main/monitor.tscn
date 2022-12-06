@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Cenas/interface/computerOptions.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Cenas/main/score.gd" type="Script" id=2]
 [ext_resource path="res://Cenas/main/monitor.gd" type="Script" id=3]
-[ext_resource path="res://assets/assets_cenario/shop.png" type="Texture" id=4]
 [ext_resource path="res://assets/dektopos.jpg" type="Texture" id=5]
 [ext_resource path="res://assets/Font/Newspaper.ttf" type="DynamicFontData" id=6]
 
@@ -17,14 +15,6 @@ scale = Vector2( 0.532292, 0.557407 )
 texture = ExtResource( 5 )
 script = ExtResource( 3 )
 
-[node name="back" type="Button" parent="."]
-visible = false
-margin_left = 70.8731
-margin_top = -99.8728
-margin_right = 119.873
-margin_bottom = -79.8728
-text = "Voltar"
-
 [node name="Menu" parent="." instance=ExtResource( 1 )]
 visible = false
 anchor_left = 0.678
@@ -35,31 +25,6 @@ margin_left = -43.5878
 margin_top = -995.136
 margin_right = 470.412
 margin_bottom = -631.136
-
-[node name="exit" type="Button" parent="Menu"]
-margin_left = 293.118
-margin_top = -51.7108
-margin_right = 316.118
-margin_bottom = -31.7108
-text = "X"
-
-[node name="score" type="Label" parent="Menu"]
-margin_left = 13.212
-margin_top = -48.4662
-margin_right = 53.212
-margin_bottom = -34.4662
-text = "COIN:"
-script = ExtResource( 2 )
-
-[node name="shop" type="Button" parent="Menu"]
-margin_left = 98.1465
-margin_top = 89.4293
-margin_right = 242.147
-margin_bottom = 163.429
-icon = ExtResource( 4 )
-flat = true
-icon_align = 1
-expand_icon = true
 
 [node name="tapete" type="Button" parent="Menu" groups=["items_buttons"]]
 visible = false
@@ -112,13 +77,6 @@ margin_right = -676.0
 margin_bottom = -109.0
 flat = true
 
-[node name="Button_Shop" type="Button" parent="."]
-margin_left = -826.614
-margin_top = 69.9669
-margin_right = -649.614
-margin_bottom = 193.967
-flat = true
-
 [node name="Button_News" type="Button" parent="."]
 margin_left = -830.371
 margin_top = 287.043
@@ -143,10 +101,6 @@ margin_right = -652.0
 margin_bottom = -348.0
 color = Color( 0.611765, 0.690196, 0.819608, 1 )
 
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Menu/exit" to="." method="_on_exit_pressed"]
-[connection signal="pressed" from="Menu/shop" to="." method="_on_shop_pressed"]
 [connection signal="pressed" from="Button_Game" to="." method="_on_Button_Game_pressed"]
 [connection signal="pressed" from="Button_Work" to="." method="_on_Button_Work_pressed"]
-[connection signal="pressed" from="Button_Shop" to="." method="_on_Button_Shop_pressed"]
 [connection signal="pressed" from="Voltar" to="." method="_on_Voltar_pressed"]

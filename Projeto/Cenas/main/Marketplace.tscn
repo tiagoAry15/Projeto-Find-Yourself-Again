@@ -162,7 +162,7 @@ margin_right = 313.766
 margin_bottom = -36.6195
 size_flags_stretch_ratio = 0.0
 
-[node name="TextureButton" type="TextureButton" parent="Pagina1/Quadro"]
+[node name="Quadro" type="TextureButton" parent="Pagina1/Quadro"]
 margin_left = 28.103
 margin_top = 12.5529
 margin_right = 145.103
@@ -171,14 +171,14 @@ mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 12 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina1/Quadro/TextureButton"]
+[node name="ColorRect" type="ColorRect" parent="Pagina1/Quadro/Quadro"]
 margin_left = -27.858
 margin_top = 143.95
 margin_right = 146.142
 margin_bottom = 170.95
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina1/Quadro/TextureButton/ColorRect"]
+[node name="Label" type="Label" parent="Pagina1/Quadro/Quadro/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
 margin_left = 7.685
 margin_top = 5.21557
@@ -188,7 +188,7 @@ text = "Quadro"
 align = 1
 valign = 1
 
-[node name="Quadro" type="Button" parent="Pagina1/Quadro/TextureButton"]
+[node name="Quadro" type="Button" parent="Pagina1/Quadro/Quadro"]
 margin_left = 83.5743
 margin_top = 143.95
 margin_right = 145.574
@@ -671,8 +671,8 @@ current = true
 [connection signal="pressed" from="Pagina1/Halter/Halter/Halter" to="." method="_on_Halter_pressed"]
 [connection signal="pressed" from="Pagina1/Console/Console" to="." method="_on_Console_pressed"]
 [connection signal="pressed" from="Pagina1/Console/Console/Console" to="." method="_on_Console_pressed"]
-[connection signal="pressed" from="Pagina1/Quadro/TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="Pagina1/Quadro/TextureButton/Quadro" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Pagina1/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Pagina1/Quadro/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Pagina1/Piano/P" to="." method="_on_P_pressed"]
 [connection signal="pressed" from="Pagina1/Piano/P/Button" to="." method="_on_P_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books" to="." method="_on_Books_pressed"]

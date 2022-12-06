@@ -2,7 +2,6 @@ extends Node
 
 var firstTime = true
 var score = 0
-<<<<<<< Updated upstream
 var items =  {}
 var file_path = "user://savegame.dat"
 var days =  0
@@ -46,18 +45,6 @@ func object_interact(objectName):
 	if objectName == "Door":
 		CharacterActions._End_Game()	
 	
-		
-=======
-var itens_comprados = {
-	"banco_azul" : false,
-	"tapete": false,
-	"Halter": false,
-	"Console": false,
-	"Books": false,
-	"Art": false,
-	"Mirror": false,
-	"Piano3": false
-}
 
 var atividades = {
 	"banco_azul": 6
@@ -65,4 +52,3 @@ var atividades = {
 var animacoes = {
 	"banco_azul": "animacao"
 }
->>>>>>> Stashed changes
