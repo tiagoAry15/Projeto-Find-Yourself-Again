@@ -24,25 +24,14 @@ func buy_item(item):
 		get_node("Menu/" + item).hide()
 
 
-func _on_back_pressed():
-	
-	$Menu/workButton.show()
-	$Menu/shop.show()
-	
-	$back.hide()
-
-	pass # Replace with function body.
-
-
-func _on_exit_pressed():
-	get_tree().change_scene("res://Cenas/main/Main.tscn")
-	pass # Replace with function body.
-
-func _on_Button_Game_pressed():
-	get_tree().change_scene("res://Cenas/minigame/pong.tscn")
 
 func _on_Button_Shop_pressed():
 	get_tree().change_scene("res://Cenas/main/Marketplace.tscn")
 
 func _on_Button_Work_pressed():
 	get_tree().change_scene("res://Cenas/minigame/pong.tscn")
+	get_tree().change_scene("res://Cenas/main/Marketplace.tscn")
+
+
+func _on_Voltar_pressed():
+	get_tree().change_scene("res://Cenas/main/Main.tscn")
