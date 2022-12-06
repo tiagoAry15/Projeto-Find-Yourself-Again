@@ -18,37 +18,37 @@ func _on_back_pressed():
 
 func _on_Halter_pressed():
 	if GameManager.itens_comprados["Halter"] == false:
-		if GameManager.score >= 5:
-			GameManager.score -= 5
+		if GameManager.score >= 10:
+			GameManager.score -= 10
 			GameManager.itens_comprados["Halter"] = true
 
 
 func _on_P_pressed():
 	if GameManager.itens_comprados["Piano3"] == false:
-		if GameManager.score >= 5:
-			GameManager.score -= 5
+		if GameManager.score >= 35:
+			GameManager.score -= 35
 			GameManager.itens_comprados["Piano3"] = true
 			
 
 
 func _on_Console_pressed():
 	if GameManager.itens_comprados["Console"] == false:
-		if GameManager.score >= 5:
-			GameManager.score -= 5
+		if GameManager.score >= 25:
+			GameManager.score -= 25
 			GameManager.itens_comprados["Console"] = true
 
 
 func _on_TextureButton_pressed():
 	if GameManager.itens_comprados["Art"] == false:
-		if GameManager.score >= 5:
-			GameManager.score -= 5
+		if GameManager.score >= 15:
+			GameManager.score -= 15
 			GameManager.itens_comprados["Art"] = true
 
 
 func _on_Books_pressed():
 	if GameManager.itens_comprados["Books"] == false:
-		if GameManager.score >= 5:
-			GameManager.score -= 5
+		if GameManager.score >= 10:
+			GameManager.score -= 10
 			GameManager.itens_comprados["Books"] = true
 
 
