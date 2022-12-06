@@ -162,9 +162,7 @@ margin_right = 314.011
 margin_bottom = -36.584
 size_flags_stretch_ratio = 0.0
 
-
 [node name="Quadro" type="TextureButton" parent="Pagina1/Quadro" groups=["items_buttons"]]
-
 margin_left = 30.0
 margin_top = -5.0
 margin_right = 147.0
@@ -209,35 +207,35 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-
-[node name="P" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
-
+[node name="Piano" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 186.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina1/Piano/Piano3"]
-margin_top = 159.0
-margin_right = 174.0
-margin_bottom = 186.0
+[node name="ColorRect" type="ColorRect" parent="Pagina1/Piano/Piano"]
+margin_left = -0.132202
+margin_top = 159.218
+margin_right = 173.868
+margin_bottom = 186.218
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina1/Piano/Piano3/ColorRect"]
+[node name="Label" type="Label" parent="Pagina1/Piano/Piano/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
-margin_top = 4.3631
-margin_right = 51.0
-margin_bottom = 23.3631
+margin_left = 4.80312
+margin_top = 4.17249
+margin_right = 55.8031
+margin_bottom = 23.1725
 text = "Piano"
 align = 1
 valign = 1
 
-[node name="Piano3" type="Button" parent="Pagina1/Piano/Piano3"]
-margin_left = 112.0
-margin_top = 159.0
-margin_right = 174.0
-margin_bottom = 186.0
+[node name="Piano" type="Button" parent="Pagina1/Piano/Piano"]
+margin_left = 112.261
+margin_top = 159.218
+margin_right = 174.261
+margin_bottom = 186.218
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 5 )
@@ -678,8 +676,6 @@ current = true
 [connection signal="pressed" from="Pagina1/Console/Console/Console" to="." method="_on_Console_pressed"]
 [connection signal="pressed" from="Pagina1/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Pagina1/Quadro/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="Pagina1/Piano/Piano3" to="." method="_on_P_pressed"]
-[connection signal="pressed" from="Pagina1/Piano/Piano3/Piano3" to="." method="_on_P_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books" to="." method="_on_Books_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books/Books" to="." method="_on_Books_pressed"]
 [connection signal="pressed" from="Pagina1/Espelho/Espelho" to="." method="_on_Espelho_pressed"]
