@@ -42,7 +42,6 @@ material = SubResource( 4 )
 position = Vector2( 682, 401 )
 scale = Vector2( 37.0391, 21.8906 )
 texture = ExtResource( 1 )
-script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource( 2 )
@@ -50,3 +49,4 @@ margin_left = -878.0
 margin_top = -548.0
 margin_right = 1577.0
 margin_bottom = 955.0
+script = ExtResource( 2 )

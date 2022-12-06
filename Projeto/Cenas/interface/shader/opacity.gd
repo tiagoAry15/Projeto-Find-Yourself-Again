@@ -1,4 +1,4 @@
-extends Sprite
+extends ColorRect
 
 
 # Declare member variables here. Examples:
@@ -8,7 +8,7 @@ extends Sprite
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	modulate.a8 = 2
+	modulate.a8 = 0
 	pass # Replace with function body.
 
 

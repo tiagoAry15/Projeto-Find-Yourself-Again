@@ -20,7 +20,6 @@ func _ready():
 	for item in get_tree().get_nodes_in_group("items_buttons"):
 		item.connect("pressed", self,"buy_item")
 		
-	$back.show()
 	
 	
 func buy_item(objeto):
