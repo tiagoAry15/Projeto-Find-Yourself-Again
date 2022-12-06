@@ -25,12 +25,9 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="MeshTexture" id=7]
 
-[sub_resource type="DynamicFontData" id=4]
-font_path = "res://assets/Font/8-BIT WONDER.TTF"
-
 [sub_resource type="DynamicFont" id=5]
 use_mipmaps = true
-font_data = SubResource( 4 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFontData" id=11]
 font_path = "res://assets/Font/8-BIT WONDER.TTF"
@@ -94,7 +91,7 @@ script = ExtResource( 4 )
 [node name="web" type="Sprite" parent="."]
 position = Vector2( 512.5, 299.5 )
 scale = Vector2( 1.03947, 0.958664 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 519, 325.5 )
@@ -149,14 +146,14 @@ margin_top = 16.0
 margin_right = 1012.0
 margin_bottom = 52.0
 custom_fonts/font = SubResource( 6 )
-text = "EXIT"
 icon = SubResource( 7 )
+flat = true
 
 [node name="score" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 24.0
-margin_right = 72.0
-margin_bottom = 40.0
+margin_left = 11.0
+margin_top = 63.0
+margin_right = 67.0
+margin_bottom = 79.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 5 )
@@ -164,10 +161,10 @@ text = "COIN:"
 script = ExtResource( 5 )
 
 [node name="Boost" type="Label" parent="."]
-margin_left = 136.0
-margin_top = 24.0
-margin_right = 160.0
-margin_bottom = 41.0
+margin_left = 102.0
+margin_top = 63.0
+margin_right = 126.0
+margin_bottom = 80.0
 custom_fonts/font = SubResource( 12 )
 text = "1x"
 
@@ -176,10 +173,10 @@ anims/promotion! = SubResource( 9 )
 
 [node name="Promotion" type="Label" parent="."]
 anchor_bottom = 0.012
-margin_left = 384.0
-margin_top = 40.0
-margin_right = 648.0
-margin_bottom = 48.8
+margin_left = 380.0
+margin_top = 71.0
+margin_right = 644.0
+margin_bottom = 79.8
 custom_fonts/font = SubResource( 10 )
 text = "Voce Foi Promovido"
 

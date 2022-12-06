@@ -78,7 +78,7 @@ size_flags_stretch_ratio = 0.0
 
 [node name="Halter" type="TextureButton" parent="Pagina1/Halter" groups=["items_buttons"]]
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 184.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 3 )
 expand = true
@@ -162,7 +162,11 @@ margin_right = 314.011
 margin_bottom = -36.584
 size_flags_stretch_ratio = 0.0
 
+<<<<<<< HEAD
 [node name="Quadro" type="TextureButton" parent="Pagina1/Quadro"]
+=======
+[node name="Quadro" type="TextureButton" parent="Pagina1/Quadro" groups=["items_buttons"]]
+>>>>>>> 283d65a294b7fa05e6d53775a672408cd7a97f2b
 margin_left = 30.0
 margin_top = -5.0
 margin_right = 147.0
@@ -207,9 +211,13 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
+<<<<<<< HEAD
 [node name="Piano3" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
+=======
+[node name="P" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
+>>>>>>> 283d65a294b7fa05e6d53775a672408cd7a97f2b
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 186.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 expand = true
@@ -467,9 +475,9 @@ valign = 1
 
 [node name="Remedio" type="Button" parent="Pagina2/Remedio/Remedio"]
 margin_left = 127.763
-margin_top = 167.942
+margin_top = 168.985
 margin_right = 189.763
-margin_bottom = 194.942
+margin_bottom = 195.985
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 3 )

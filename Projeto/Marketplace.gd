@@ -23,22 +23,22 @@ func _ready():
 	GameManager.load_data()
 	print(GameManager.items)
 	for item in get_tree().get_nodes_in_group("items_buttons"):
+
 		print("item? " + item.name)
-		item.connect("pressed", self,"buy_item", [item])
-		
-		
-	$Pagina1/Voltar.show()
-	
+		item.connect("pressed", self,"buy_item",[item])
+
+
 	
 func buy_item(objeto):
+	print(GameManager.items)
 	if GameManager.score >= GameManager.items[objeto.name].price:
 		GameManager.items[objeto.name].comprado = true
 		GameManager.score -= GameManager.items[objeto.name].price
+
 		GameManager.save_data()
-		# esgotado
+		# e
 		
 func _on_Button_pressed():
-	
 	get_tree().change_scene("res://Cenas/main/monitor.tscn")
 	pass # Replace with function body.
 
@@ -48,7 +48,7 @@ func _on_Voltar2_pressed():
 
 
 func _on_Voltar_pressed():
-		get_tree().change_scene("res://Cenas/main/monitor.tscn")
+	get_tree().change_scene("res://Cenas/main/monitor.tscn")
 
 
 func _on_VoltarPag1_pressed():

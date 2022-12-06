@@ -8,7 +8,7 @@ func _ready():
 	$AnimationPlayer.seek(5)
 
 func _process(delta):
-	var time = OS.get_time()
+
 	var timer = Timer.new()
 	add_child(timer)
 	timer.connect("timeout", self, "_on_Timer_timeout")
@@ -24,6 +24,7 @@ func _process(delta):
 	else:
 		onetime = true
 		
+
 	$AnimationPlayer.play("Animation_Day_Night")
 	$AnimationPlayer.seek(CurrentFrame)
 	yield($AnimationPlayer, "animation_finished")

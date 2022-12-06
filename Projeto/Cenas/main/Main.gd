@@ -33,8 +33,10 @@ func set_items():
 			"increase_health": item.increase_health
 			}
 			GameManager.items[item.name] = itemModel
+
 		print("itens adicionados")
-		
+
+
 		GameManager.save_data()
 		
 	else:
