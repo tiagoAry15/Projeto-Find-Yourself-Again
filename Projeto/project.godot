@@ -74,6 +74,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://item.gd"
 }, {
+"base": "Control",
+"class": "PianoKey",
+"language": "GDScript",
+"path": "res://minigames/mgPiano/piano_keys/piano_key.gd"
+}, {
 "base": "KinematicBody2D",
 "class": "PlayerInputComponent",
 "language": "GDScript",
@@ -93,6 +98,7 @@ _global_script_class_icons={
 "DialogicUtil": "",
 "HistoryRow": "",
 "Item": "",
+"PianoKey": "",
 "PlayerInputComponent": ""
 }
 

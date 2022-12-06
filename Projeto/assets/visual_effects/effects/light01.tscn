@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/visual_effects/random_selection.png" type="Texture" id=1]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, -12.2727 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.840909 ), -0.84, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=3]
+curve = SubResource( 2 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.526971, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 0.95343, 0.5625, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 1.0
+angle_random = 0.3
+angle_curve = SubResource( 3 )
+color_ramp = SubResource( 5 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 1 )
+amount = 4
+process_material = SubResource( 6 )
+texture = ExtResource( 1 )
