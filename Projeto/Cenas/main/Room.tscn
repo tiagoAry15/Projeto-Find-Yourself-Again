@@ -400,6 +400,7 @@ position = Vector2( 1399, 529 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 4 )
 script = ExtResource( 31 )
+price = 35.0
 
 [node name="static" type="StaticBody2D" parent="Piano3"]
 
@@ -485,6 +486,7 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 20 )
 flip_h = true
 script = ExtResource( 31 )
+price = 5.0
 
 [node name="WallShelving1" type="Sprite" parent="."]
 position = Vector2( 583, -88 )
@@ -498,11 +500,13 @@ scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 17 )
 flip_h = true
 script = ExtResource( 31 )
+price = 10.0
 
-[node name="Quadro" type="Sprite" parent="."]
+[node name="Quadro" type="Sprite" parent="." groups=["interactive_objects"]]
 position = Vector2( 1024, -233 )
 texture = ExtResource( 12 )
 flip_h = true
+script = ExtResource( 31 )
 
 [node name="Cenario" type="Node" parent="."]
 
@@ -759,12 +763,15 @@ position = Vector2( 872, 291 )
 scale = Vector2( 3.81744, 4.59492 )
 texture = ExtResource( 15 )
 script = ExtResource( 31 )
+price = 15.0
 
 [node name="Halter" type="Sprite" parent="." groups=["interactive_objects"]]
 position = Vector2( 433, 155 )
 scale = Vector2( 0.18825, 0.20787 )
 texture = ExtResource( 33 )
 script = ExtResource( 31 )
+id = "Halter"
+price = 10.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Halter"]
 position = Vector2( 53.1208, -33.6749 )
@@ -780,5 +787,6 @@ scale = Vector2( 0.132653, 0.159163 )
 texture = ExtResource( 35 )
 flip_h = true
 script = ExtResource( 31 )
+price = 25.0
 
 [connection signal="area_entered" from="Cenario/SwitchWallOffS/Area2D" to="." method="_on_Area2D_area_entered"]
