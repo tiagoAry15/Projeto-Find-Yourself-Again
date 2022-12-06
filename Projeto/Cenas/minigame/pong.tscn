@@ -1,4 +1,5 @@
 
+
 [gd_scene load_steps=20 format=2]
 
 
@@ -9,11 +10,13 @@
 [ext_resource path="res://Cenas/minigame/levelPong.gd" type="Script" id=4]
 [ext_resource path="res://Cenas/main/score.gd" type="Script" id=5]
 
+
 [ext_resource path="res://assets/Font/8-BIT WONDER.TTF" type="DynamicFontData" id=6]
 [ext_resource path="res://assets/sounds/smb_1-up.wav" type="AudioStream" id=7]
 
 [ext_resource path="res://assets/MPLACE.png" type="Texture" id=8]
 [ext_resource path="res://assets/Font/Newspaper.ttf" type="DynamicFontData" id=9]
+
 
 
 [sub_resource type="GradientTexture2D" id=1]
@@ -29,12 +32,9 @@ font_data = ExtResource( 6 )
 
 [sub_resource type="MeshTexture" id=7]
 
-[sub_resource type="DynamicFontData" id=4]
-font_path = "res://assets/Font/8-BIT WONDER.TTF"
-
 [sub_resource type="DynamicFont" id=5]
 use_mipmaps = true
-font_data = SubResource( 4 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFontData" id=11]
 font_path = "res://assets/Font/8-BIT WONDER.TTF"
@@ -56,7 +56,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 384, 40 ), Vector2( 384, 24 ) ]
+"values": [ Vector2( 384, 100 ), Vector2( 384, 70 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("Promotion:visible")
@@ -98,7 +98,7 @@ script = ExtResource( 4 )
 [node name="web" type="Sprite" parent="."]
 position = Vector2( 512.5, 299.5 )
 scale = Vector2( 1.03947, 0.958664 )
-texture = ExtResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 519, 325.5 )
@@ -148,19 +148,21 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 896.0
-margin_top = 16.0
-margin_right = 1012.0
-margin_bottom = 52.0
+
+margin_left = 176.0
+margin_top = 8.0
+margin_right = 216.0
+margin_bottom = 44.0
+
 custom_fonts/font = SubResource( 6 )
-text = "EXIT"
 icon = SubResource( 7 )
+flat = true
 
 [node name="score" type="Label" parent="."]
-margin_left = 16.0
-margin_top = 24.0
-margin_right = 72.0
-margin_bottom = 40.0
+margin_left = 11.0
+margin_top = 63.0
+margin_right = 67.0
+margin_bottom = 79.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 5 )
@@ -168,10 +170,10 @@ text = "COIN:"
 script = ExtResource( 5 )
 
 [node name="Boost" type="Label" parent="."]
-margin_left = 136.0
-margin_top = 24.0
-margin_right = 160.0
-margin_bottom = 41.0
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 216.0
+margin_bottom = 81.0
 custom_fonts/font = SubResource( 12 )
 text = "1x"
 
@@ -181,13 +183,15 @@ anims/promotion! = SubResource( 9 )
 [node name="Promotion" type="Label" parent="."]
 anchor_bottom = 0.012
 margin_left = 384.0
-margin_top = 40.0
+margin_top = 100.0
 margin_right = 648.0
-margin_bottom = 48.8
+margin_bottom = 108.8
 custom_fonts/font = SubResource( 10 )
 text = "Voce Foi Promovido"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+
 
 [connection signal="body_entered" from="right" to="." method="_on_right_body_entered"]
 [connection signal="body_entered" from="left" to="." method="_on_left_body_entered"]

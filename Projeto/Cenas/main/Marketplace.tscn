@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Marketplace.gd" type="Script" id=1]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Blocks/Piano 2.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://assets/ComidasDeTodosOsSabores.png" type="Texture" id=10]
 [ext_resource path="res://assets/assets_cenario/Free isometric voxel room/PNGs/Mirror 1.png" type="Texture" id=11]
 [ext_resource path="res://assets/assets_cenario/Mega Isometric Block Pack/Decorations/art1 1.png" type="Texture" id=12]
+[ext_resource path="res://assets/Font/8-BIT WONDER.TTF" type="DynamicFontData" id=13]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.933333, 0.0941176, 0.0941176, 1 )
@@ -61,6 +62,10 @@ font_data = ExtResource( 8 )
 size = 48
 font_data = ExtResource( 8 )
 
+[sub_resource type="DynamicFont" id=17]
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 13 )
+
 [node name="Marketplace" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -76,9 +81,9 @@ margin_right = -142.16
 margin_bottom = -36.6195
 size_flags_stretch_ratio = 0.0
 
-[node name="Halter" type="TextureButton" parent="Pagina1/Halter"]
+[node name="Halter" type="TextureButton" parent="Pagina1/Halter" groups=["items_buttons"]]
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 184.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 3 )
 expand = true
@@ -108,7 +113,7 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 1 )
-text = "10 reais"
+text = "30 reais"
 
 [node name="Console" type="ColorRect" parent="Pagina1"]
 margin_left = -89.6429
@@ -117,20 +122,20 @@ margin_right = 84.3571
 margin_bottom = -36.6195
 size_flags_stretch_ratio = 0.0
 
-[node name="Console" type="TextureButton" parent="Pagina1/Console"]
-margin_left = -45.3034
-margin_top = -40.5806
-margin_right = 224.697
-margin_bottom = 175.419
+[node name="Console" type="TextureButton" parent="Pagina1/Console" groups=["items_buttons"]]
+margin_left = -2.0
+margin_top = -42.0
+margin_right = 174.0
+margin_bottom = 187.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 5 )
 expand = true
 
 [node name="ColorRect" type="ColorRect" parent="Pagina1/Console/Console"]
-margin_left = 45.3035
-margin_top = 199.782
-margin_right = 219.303
-margin_bottom = 226.782
+margin_left = 2.06467
+margin_top = 200.588
+margin_right = 176.064
+margin_bottom = 227.588
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
 [node name="Label" type="Label" parent="Pagina1/Console/Console/ColorRect"]
@@ -144,38 +149,38 @@ align = 1
 valign = 1
 
 [node name="Console" type="Button" parent="Pagina1/Console/Console"]
-margin_left = 157.116
-margin_top = 199.782
-margin_right = 219.116
-margin_bottom = 226.782
+margin_left = 114.458
+margin_top = 200.588
+margin_right = 176.458
+margin_bottom = 227.588
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 10 )
 custom_styles/normal = SubResource( 1 )
-text = "25 Reais"
+text = "50 Reais"
 
 [node name="Quadro" type="ColorRect" parent="Pagina1"]
-margin_left = 139.766
-margin_top = -195.62
-margin_right = 313.766
-margin_bottom = -36.6195
+margin_left = 140.011
+margin_top = -195.585
+margin_right = 314.011
+margin_bottom = -36.584
 size_flags_stretch_ratio = 0.0
 
-[node name="Quadro" type="TextureButton" parent="Pagina1/Quadro"]
-margin_left = 28.103
-margin_top = 12.5529
-margin_right = 145.103
-margin_bottom = 148.553
+[node name="Quadro" type="TextureButton" parent="Pagina1/Quadro" groups=["items_buttons"]]
+margin_left = 30.0
+margin_top = -5.0
+margin_right = 147.0
+margin_bottom = 192.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 12 )
 expand = true
 
 [node name="ColorRect" type="ColorRect" parent="Pagina1/Quadro/Quadro"]
-margin_left = -27.858
-margin_top = 143.95
-margin_right = 146.142
-margin_bottom = 170.95
+margin_left = -30.0
+margin_top = 163.554
+margin_right = 144.0
+margin_bottom = 190.554
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
 [node name="Label" type="Label" parent="Pagina1/Quadro/Quadro/ColorRect"]
@@ -189,16 +194,16 @@ align = 1
 valign = 1
 
 [node name="Quadro" type="Button" parent="Pagina1/Quadro/Quadro"]
-margin_left = 83.5743
-margin_top = 143.95
-margin_right = 145.574
-margin_bottom = 170.95
+margin_left = 82.393
+margin_top = 163.554
+margin_right = 144.393
+margin_bottom = 190.554
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 11 )
 custom_styles/normal = SubResource( 1 )
-text = "15 Reais"
+text = "30 Reais"
 
 [node name="Piano" type="ColorRect" parent="Pagina1"]
 margin_left = -314.232
@@ -207,39 +212,41 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="P" type="TextureButton" parent="Pagina1/Piano"]
+[node name="Piano" type="TextureButton" parent="Pagina1/Piano" groups=["items_buttons"]]
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 186.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina1/Piano/P"]
-margin_top = 159.0
-margin_right = 174.0
-margin_bottom = 186.0
+[node name="ColorRect" type="ColorRect" parent="Pagina1/Piano/Piano"]
+margin_left = -0.132202
+margin_top = 159.218
+margin_right = 173.868
+margin_bottom = 186.218
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina1/Piano/P/ColorRect"]
+[node name="Label" type="Label" parent="Pagina1/Piano/Piano/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
-margin_top = 4.3631
-margin_right = 51.0
-margin_bottom = 23.3631
+margin_left = 4.80312
+margin_top = 4.17249
+margin_right = 55.8031
+margin_bottom = 23.1725
 text = "Piano"
 align = 1
 valign = 1
 
-[node name="Button" type="Button" parent="Pagina1/Piano/P"]
-margin_left = 112.0
-margin_top = 159.0
-margin_right = 174.0
-margin_bottom = 186.0
+[node name="Piano" type="Button" parent="Pagina1/Piano/Piano"]
+margin_left = 112.261
+margin_top = 159.218
+margin_right = 174.261
+margin_bottom = 186.218
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 12 )
 custom_styles/normal = SubResource( 1 )
-text = "35 Reais"
+text = "150 Reais"
 
 [node name="Books" type="ColorRect" parent="Pagina1"]
 margin_left = -89.6429
@@ -248,9 +255,9 @@ margin_right = 84.3571
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="Books" type="TextureButton" parent="Pagina1/Books"]
+[node name="Books" type="TextureButton" parent="Pagina1/Books" groups=["items_buttons"]]
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 187.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 6 )
 expand = true
@@ -280,7 +287,7 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 6 )
 custom_styles/pressed = SubResource( 13 )
 custom_styles/normal = SubResource( 1 )
-text = "10 Reais"
+text = "25 Reais"
 
 [node name="Espelho" type="ColorRect" parent="Pagina1"]
 margin_left = 139.766
@@ -289,21 +296,21 @@ margin_right = 313.766
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="Espelho" type="TextureButton" parent="Pagina1/Espelho"]
+[node name="Mirror2" type="TextureButton" parent="Pagina1/Espelho" groups=["items_buttons"]]
 self_modulate = Color( 0.196078, 0.188235, 0.188235, 1 )
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 184.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 11 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina1/Espelho/Espelho"]
+[node name="ColorRect" type="ColorRect" parent="Pagina1/Espelho/Mirror2"]
 margin_top = 159.0
 margin_right = 174.0
 margin_bottom = 186.0
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina1/Espelho/Espelho/ColorRect"]
+[node name="Label" type="Label" parent="Pagina1/Espelho/Mirror2/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
 margin_left = 7.92999
 margin_top = 4.39008
@@ -313,7 +320,7 @@ text = "Espelho"
 align = 1
 valign = 1
 
-[node name="Espelho" type="Button" parent="Pagina1/Espelho/Espelho"]
+[node name="Mirror2" type="Button" parent="Pagina1/Espelho/Mirror2"]
 margin_left = 112.0
 margin_top = 159.0
 margin_right = 174.0
@@ -323,7 +330,7 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/pressed = SubResource( 14 )
 custom_styles/normal = SubResource( 1 )
-text = "5 Reais"
+text = "20 Reais"
 
 [node name="Ajuste Return" type="ColorRect" parent="Pagina1"]
 margin_left = -675.559
@@ -378,7 +385,7 @@ margin_top = -248.262
 margin_right = 281.07
 margin_bottom = -200.262
 custom_fonts/font = SubResource( 16 )
-text = "Saldo: "
+text = "SALDO: "
 
 [node name="Label2" type="Label" parent="Pagina2"]
 modulate = Color( 0, 0, 0, 1 )
@@ -389,27 +396,27 @@ margin_bottom = -201.305
 custom_fonts/font = SubResource( 15 )
 text = "Pagina 2"
 
-[node name="Halter" type="ColorRect" parent="Pagina2"]
+[node name="Comida" type="ColorRect" parent="Pagina2"]
 margin_left = -316.16
 margin_top = -195.619
 margin_right = -142.16
 margin_bottom = -36.6195
 size_flags_stretch_ratio = 0.0
 
-[node name="Comida" type="TextureButton" parent="Pagina2/Halter"]
+[node name="Comida" type="TextureButton" parent="Pagina2/Comida" groups=["items_buttons"]]
 margin_right = 174.0
-margin_bottom = 159.0
+margin_bottom = 186.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 10 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina2/Halter/Comida"]
+[node name="ColorRect" type="ColorRect" parent="Pagina2/Comida/Comida"]
 margin_top = 159.0
 margin_right = 174.0
 margin_bottom = 186.0
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina2/Halter/Comida/ColorRect"]
+[node name="Label" type="Label" parent="Pagina2/Comida/Comida/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
 margin_top = 4.0
 margin_right = 64.0
@@ -418,7 +425,7 @@ text = "Comida"
 align = 1
 valign = 1
 
-[node name="Comida" type="Button" parent="Pagina2/Halter/Comida"]
+[node name="Comida" type="Button" parent="Pagina2/Comida/Comida"]
 margin_left = 112.0
 margin_top = 159.0
 margin_right = 174.0
@@ -428,7 +435,7 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/pressed = SubResource( 9 )
 custom_styles/normal = SubResource( 1 )
-text = "3 Reais"
+text = "10 Reais"
 
 [node name="Remedio" type="ColorRect" parent="Pagina2"]
 margin_left = -89.6429
@@ -437,11 +444,11 @@ margin_right = 84.3571
 margin_bottom = -36.6195
 size_flags_stretch_ratio = 0.0
 
-[node name="Remedio" type="TextureButton" parent="Pagina2/Remedio"]
-margin_left = -16.0256
-margin_top = -9.87509
-margin_right = 182.974
-margin_bottom = 175.125
+[node name="Remedio" type="TextureButton" parent="Pagina2/Remedio" groups=["items_buttons"]]
+margin_left = -16.0
+margin_top = -10.0
+margin_right = 183.0
+margin_bottom = 185.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 9 )
 expand = true
@@ -467,15 +474,15 @@ valign = 1
 
 [node name="Remedio" type="Button" parent="Pagina2/Remedio/Remedio"]
 margin_left = 127.763
-margin_top = 167.942
+margin_top = 168.985
 margin_right = 189.763
-margin_bottom = 194.942
+margin_bottom = 195.985
 mouse_default_cursor_shape = 2
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 10 )
 custom_styles/normal = SubResource( 1 )
-text = "8 Reais"
+text = "15 Reais"
 
 [node name="Planta" type="ColorRect" parent="Pagina2"]
 visible = false
@@ -528,20 +535,20 @@ margin_right = -140.232
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="P" type="TextureButton" parent="Pagina2/Piano"]
+[node name="Piano" type="TextureButton" parent="Pagina2/Piano" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 159.0
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource( 2 )
 expand = true
 
-[node name="ColorRect" type="ColorRect" parent="Pagina2/Piano/P"]
+[node name="ColorRect" type="ColorRect" parent="Pagina2/Piano/Piano"]
 margin_top = 159.0
 margin_right = 174.0
 margin_bottom = 186.0
 color = Color( 0.0313726, 0.0313726, 0.0313726, 1 )
 
-[node name="Label" type="Label" parent="Pagina2/Piano/P/ColorRect"]
+[node name="Label" type="Label" parent="Pagina2/Piano/Piano/ColorRect"]
 modulate = Color( 0.976471, 0.870588, 0.870588, 1 )
 margin_top = 4.3631
 margin_right = 51.0
@@ -550,7 +557,7 @@ text = "Piano"
 align = 1
 valign = 1
 
-[node name="Button" type="Button" parent="Pagina2/Piano/P"]
+[node name="Button" type="Button" parent="Pagina2/Piano/Piano"]
 margin_left = 112.0
 margin_top = 159.0
 margin_right = 174.0
@@ -570,7 +577,7 @@ margin_right = 84.3571
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="TextureButton" type="TextureButton" parent="Pagina2/Books"]
+[node name="TextureButton" type="TextureButton" parent="Pagina2/Books" groups=["items_buttons"]]
 margin_right = 174.0
 margin_bottom = 159.0
 mouse_default_cursor_shape = 2
@@ -612,7 +619,7 @@ margin_right = 313.766
 margin_bottom = 216.229
 size_flags_stretch_ratio = 0.0
 
-[node name="TextureButton" type="TextureButton" parent="Pagina2/Mesa e Tv"]
+[node name="TextureButton" type="TextureButton" parent="Pagina2/Mesa e Tv" groups=["items_buttons"]]
 self_modulate = Color( 0.196078, 0.188235, 0.188235, 1 )
 margin_right = 174.0
 margin_bottom = 159.0
@@ -665,7 +672,18 @@ flat = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 512, 301 )
+offset = Vector2( 1024, 0 )
 current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Saldo_insuficiente" type="Label" parent="CanvasLayer"]
+margin_left = 364.0
+margin_top = 71.0
+margin_right = 620.0
+margin_bottom = 87.0
+custom_fonts/font = SubResource( 17 )
+text = "Saldo Insuficiente"
 
 [connection signal="pressed" from="Pagina1/Halter/Halter" to="." method="_on_Halter_pressed"]
 [connection signal="pressed" from="Pagina1/Halter/Halter/Halter" to="." method="_on_Halter_pressed"]
@@ -673,17 +691,13 @@ current = true
 [connection signal="pressed" from="Pagina1/Console/Console/Console" to="." method="_on_Console_pressed"]
 [connection signal="pressed" from="Pagina1/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Pagina1/Quadro/Quadro/Quadro" to="." method="_on_TextureButton_pressed"]
-[connection signal="pressed" from="Pagina1/Piano/P" to="." method="_on_P_pressed"]
-[connection signal="pressed" from="Pagina1/Piano/P/Button" to="." method="_on_P_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books" to="." method="_on_Books_pressed"]
 [connection signal="pressed" from="Pagina1/Books/Books/Books" to="." method="_on_Books_pressed"]
-[connection signal="pressed" from="Pagina1/Espelho/Espelho" to="." method="_on_Espelho_pressed"]
-[connection signal="pressed" from="Pagina1/Espelho/Espelho/Espelho" to="." method="_on_Espelho_pressed"]
+[connection signal="pressed" from="Pagina1/Espelho/Mirror2" to="." method="_on_Espelho_pressed"]
+[connection signal="pressed" from="Pagina1/Espelho/Mirror2/Mirror2" to="." method="_on_Espelho_pressed"]
 [connection signal="pressed" from="Pagina1/Voltar" to="." method="_on_Voltar_pressed"]
 [connection signal="pressed" from="Pagina1/Voltar2" to="." method="_on_Voltar2_pressed"]
-[connection signal="pressed" from="Pagina2/Halter/Comida" to="." method="_on_Comida_pressed"]
-[connection signal="pressed" from="Pagina2/Halter/Comida/Comida" to="." method="_on_Comida_pressed"]
+[connection signal="pressed" from="Pagina2/Comida/Comida" to="." method="_on_Comida_pressed"]
+[connection signal="pressed" from="Pagina2/Comida/Comida/Comida" to="." method="_on_Comida_pressed"]
 [connection signal="pressed" from="Pagina2/Remedio/Remedio" to="." method="_on_Remedio_pressed"]
-[connection signal="pressed" from="Pagina2/Remedio/Remedio/Remedio" to="." method="_on_Remedio_pressed"]
-[connection signal="pressed" from="Pagina2/Piano/P" to="." method="_on_P_pressed"]
 [connection signal="pressed" from="Pagina2/VoltarPag1" to="." method="_on_VoltarPag1_pressed"]

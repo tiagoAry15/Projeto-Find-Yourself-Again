@@ -8,6 +8,7 @@ onready var opacityBW = get_node("UI/Control/ColorRect")
 
 var imagem = load("res://assets/terraria.png")
 var randomNumber = 0
+var randomNumber2 = 0
 var textura;
 var speed = Vector2(4, 2)
 var last_mouse_pos = null
@@ -17,6 +18,7 @@ var object = null
 var rng = RandomNumberGenerator.new()
 var isWorking = false
 var doingSomething = false
+var imune = false
 var sprite_movement = {
 	"walk_up":"idle_up",
 	"walk_down":"idle_down",
@@ -38,10 +40,9 @@ func _ready():
 	timer.set_one_shot(false) # Make sure it loops
 	timer.start()
 	self.connect("interact",GameManager,"object_interact")
-	randomNumber = rng.randi_range(10,15)
 	
-func catersian_to_isometric(cartesian):
-	return Vector2(cartesian.x - cartesian.y, (cartesian.x + cartesian.y)/2)
+	randomNumber = rng.randi_range(10,15)
+	randomNumber2 = rng.randi_range(15,45)
 
 func _input(event):
 	if event.is_action_pressed("game_move") :
@@ -53,6 +54,11 @@ func _input(event):
 
 func _physics_process(delta):
 	#$AnimatedSprite.modulate = Color(healthbar,healthbar,healthbar)
+	
+	if imune:
+		yield(get_tree().create_timer(20.0), "timeout")
+		imune = false
+		
 	if last_mouse_pos:
 		var direction_vector = (last_mouse_pos - global_position)
 		
@@ -110,7 +116,7 @@ func on_show_emotion(emotion):
 	$Emotion.hide()
 	 
 func _on_Timer_timeout():
-	if not isWorking and not doingSomething:
+	if not isWorking and not doingSomething and not imune:
 		update_health(-2)
 		
 	if randomNumber == 0:
@@ -125,7 +131,17 @@ func _on_Timer_timeout():
 		randomNumber = rng.randi_range(10,15)
 	else:
 		randomNumber -= 1
+	
+	if randomNumber2 == 0:
+		$AudioStreamPlayer2D.play()
+		randomNumber2 = rng.randi_range(15,45)
+		$AudioStreamPlayer2D.stop()
+	else:
+		randomNumber2 -= 1
 		 
+
+func is_sleepy():
+	on_show_emotion("Sleepy")	
 
 func update_health(value):
 	if GameManager.healthbar > 1:

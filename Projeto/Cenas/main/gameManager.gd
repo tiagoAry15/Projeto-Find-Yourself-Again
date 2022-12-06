@@ -3,7 +3,7 @@ extends Node
 var firstTime = true
 var score = 0
 var items =  {}
-var file_path = "user://savegame.dat"
+var file_path = "user://game-data3.json"
 var days =  0
 var healthbar = 255
 var playerPosition = Vector2(1001,235)
@@ -13,7 +13,7 @@ func save_data():
 	var file = File.new()
 	var error = file.open(file_path, File.WRITE)
 	if error == OK:
-		file.store_var(to_json(items))
+		file.store_line(to_json(var2str(items)))
 	file.close()
 	print("progress Saved!")
 
@@ -21,10 +21,11 @@ func load_data():
 	var file = File.new()
 	if file.file_exists(file_path):
 		var error = file.open(file_path, File.READ)
-		print("items: " +  file.get_var())
 		if error == OK:
+			var text = file.get_as_text()
+			var data = parse_json(text)
+			items = str2var(data)
 			
-				items = parse_json(file.get_var())
 		file.close()
 		print("data loaded")
 
@@ -43,8 +44,15 @@ func object_interact(objectName):
 	if objectName == "cadeira_desk":
 		CharacterActions._Work()	
 	if objectName == "Door":
-		CharacterActions._End_Game()	
-	
+		CharacterActions._End_Game()
+	if objectName == "Halter":
+		CharacterActions._Workout()
+	if objectName == "Console":
+		CharacterActions._play_game()
+	if objectName == "Remedio":
+		CharacterActions._take_pill()
+	if objectName == "Comida":
+		CharacterActions._eat()
 
 var atividades = {
 	"banco_azul": 6
@@ -52,3 +60,5 @@ var atividades = {
 var animacoes = {
 	"banco_azul": "animacao"
 }
+
+
